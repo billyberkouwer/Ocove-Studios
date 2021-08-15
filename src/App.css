@@ -50,7 +50,7 @@
 }
 
 .nav-links li a:hover {
-  background-color: #f0f1ff;
+  background-color: rgb(240, 241, 255);
 }
 
 .horizontal-line {
@@ -81,7 +81,7 @@
 
 .company-tag {
   position: relative;
-  color: #dde0ff;
+  color: rgb(221, 224, 255);
   text-transform: uppercase;
   text-align: center;
   font-size: 4.64vw;
