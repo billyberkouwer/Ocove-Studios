@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from './Navbar';
 import HomeSection from './HomeSection';
-import gsap from 'gsap';
 
 function App() { 
   window.addEventListener("scroll", function(e) {
