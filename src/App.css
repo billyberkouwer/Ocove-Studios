@@ -1,5 +1,5 @@
 @font-face {
-  font-family: avertaDemoPe;
+  font-family: Averta;
   src: url(./assets/fonts/AvertaDemoPE-Regular.woff);
 }
 
@@ -12,7 +12,7 @@
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  font-family: avertaDemoPe;
+  font-family: Averta;
 }
 
 .global-container {
@@ -26,8 +26,8 @@
   position: fixed;
   width: 100%;
   padding: 10px 10px 10px 0;
-  background-color: white;
   z-index: 1;
+  transition: background-color .5s;
 }
 
 .nav-links {
@@ -85,6 +85,9 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 4.64vw;
+}
+
+.no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
