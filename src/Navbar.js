@@ -11,10 +11,8 @@ const Navbar = () => {
     function changeColor() {
             if (window.scrollY <= 30) {
                 setNavColor(bg1);
-                console.log(NavColor)
             } else {
                 setNavColor(bg2);
-                console.log(NavColor)
             };
     };
 
