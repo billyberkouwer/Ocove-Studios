@@ -3,20 +3,25 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
 
     const [NavColor, setNavColor] = useState('');
-
     const bg1 = 'rgba(255, 255, 255, 0)';
     const bg2 = 'rgba(255, 255, 255, 1)';
 
     useEffect(() => {
-        window.onscroll = changeColor();
-        function changeColor() {
+        function scrollBehaviour(func) {
+            window.onscroll = func;
+        }
+        
+        function changeNavBackground() {
             setInterval(function() {
-            if (window.scrollY < 40) {
-                setNavColor(bg1);
-            } else {
-                setNavColor(bg2);
-            };}, 500)
-        };
+                if (window.scrollY < 40) {
+                    setNavColor(bg1);
+                } else {
+                    setNavColor(bg2);
+                };
+            }, 300);
+        }
+
+        scrollBehaviour(changeNavBackground);
     }, []);
 
     const sectionNames = [
