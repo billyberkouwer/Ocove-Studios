@@ -1,3 +1,7 @@
+# Set Up
+
+Once you've pulled the repository to your local device, you'll need to open the folder and run 'npm install' in the terminal. This will install the standard react dependencies that aren't pushed to the git repository. When they're installed you can run 'npm start' as normal to start the local server.
+
 # Rules for Editing Code and Contributing to Repository
 
 When editing the code in this repository, create a new aptly named branch. Push to this branch until the edits are tested and stable. Only once the edits are stable should you contribute them to master/origin.
