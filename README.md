@@ -1,6 +1,6 @@
 # Rules for Editing Code and Contributing to Repository
 
-When editing the code in this repository, create a new aptly named branch. Push to this branch until the edits are tested and stable. Only once the edits are stable should you contribute them to the master/origin.
+When editing the code in this repository, create a new aptly named branch. Push to this branch until the edits are tested and stable. Only once the edits are stable should you contribute them to master/origin.
 
 -------------------------------------------------------------------------------
 
