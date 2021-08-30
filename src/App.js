@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import HomeSection from './HomeSection';
 
 function App() { 
+
   return (
     <div className="wrapper">
       <Navbar />

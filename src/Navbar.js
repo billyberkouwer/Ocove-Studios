@@ -1,28 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
 
-    const [NavColor, setNavColor] = useState('');
+    const [navBackground, setNavBackground] = useState('rgba(255, 255, 255, 0)');
     const bg1 = 'rgba(255, 255, 255, 0)';
     const bg2 = 'rgba(255, 255, 255, 1)';
 
-    useEffect(() => {
-        function scrollBehaviour(func) {
-            window.onscroll = func;
-        }
-        
-        function changeNavBackground() {
-            setInterval(function() {
-                if (window.scrollY < 40) {
-                    setNavColor(bg1);
-                } else {
-                    setNavColor(bg2);
-                };
-            }, 300);
-        }
+    function changeNavBackground() {
+        setInterval(function() {
+            if (window.scrollY < 40) {
+                setNavBackground(bg1);
+            } else {
+                setNavBackground(bg2);
+            };
+        }, 300);
+    }
 
-        scrollBehaviour(changeNavBackground);
-    }, []);
+    changeNavBackground();
 
     const sectionNames = [
         'Home',
@@ -37,7 +31,7 @@ const Navbar = () => {
     );
 
     return ( 
-        <div className="navbar" style={{backgroundColor: NavColor}}>
+        <div className="navbar" style={{backgroundColor: navBackground}}>
             <ul className="nav-links">
                 <div className="horizontal-line"></div>
                 {navLinks}

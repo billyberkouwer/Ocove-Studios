@@ -128,6 +128,7 @@ p {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+  transform: translate(0%);
 }
 
 @media only screen and (max-width: 800px) {
@@ -139,4 +140,5 @@ p {
 .header-text-container p {
   max-width: 800px;
   color: rgb(221, 224, 255);
+  transition: ease-in-out .5s;
 }
