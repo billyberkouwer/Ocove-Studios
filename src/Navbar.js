@@ -8,12 +8,12 @@ const Navbar = () => {
 
     function changeNavBackground() {
         setInterval(function() {
-            if (window.scrollY < 40) {
+            if (window.scrollY < 30) {
                 setNavBackground(bg1);
             } else {
                 setNavBackground(bg2);
             };
-        }, 300);
+        }, 200);
     };
 
     changeNavBackground();
