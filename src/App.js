@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './Navbar';
 import HomeSection from './HomeSection';
+import ProjectSection from './ProjectSection';
 
 function App() { 
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <div className="global-container">
         <HomeSection />
+        <ProjectSection />
       </div>
     </div>
   );

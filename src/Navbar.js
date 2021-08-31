@@ -14,7 +14,7 @@ const Navbar = () => {
                 setNavBackground(bg2);
             };
         }, 300);
-    }
+    };
 
     changeNavBackground();
 
