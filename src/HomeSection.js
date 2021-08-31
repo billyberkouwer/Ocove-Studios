@@ -32,7 +32,7 @@ const HomeSection = () => {
                 <div className="tag-container no-select">
                     <h1 className="company-tag">{companyTag}</h1>
                 </div>
-                <div className="header-imgs-container"></div>
+                <div className="header-imgs-container"><p>header-images</p></div>
                 <div className="header-text-container no-select"><p style={{transform: textDisplace, opacity: textFade}}>"{loremIpsum}"</p></div>
             </div>
         </div>
