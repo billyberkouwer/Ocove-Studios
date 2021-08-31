@@ -27,7 +27,7 @@ const Navbar = () => {
     ];
 
     const navLinks = sectionNames.map((sectionNames) => 
-        <li><a href='/'>{sectionNames}</a></li>
+        <li key={sectionNames}><a href='/'>{sectionNames}</a></li>
     );
 
     return ( 
