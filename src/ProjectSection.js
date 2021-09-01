@@ -1,57 +1,27 @@
-import { useState } from 'react';
+import ProjectWindow from "./ProjectWindow";
+import Projects from './projects.json';
 
 const ProjectSection = () => {
+    const projectObjects = [];
 
-    const loremIpsum = "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit";
-
-    const projectObjects = [
-        {
-            'title': 'Chappel Galleries',
-            'text': {loremIpsum},
-            'images': ''
-        },
-        {
-            'title': 'John Hounam Fine Art',
-            'text': {loremIpsum},
-            'images': ''
-        },
-        {
-            'title': 'Helen Howard Ceramics',
-            'text': {loremIpsum},
-            'images': ''
-        },
-        {
-            'title': 'Isabel Knowland Fine Art',
-            'text': {loremIpsum},
-            'images': ''
-        },
-        {
-            'title': 'Carluca Decorators',
-            'text': {loremIpsum},
-            'images': ''
-        },
-        {
-            'title': 'Dog Treats',
-            'text': {loremIpsum},
-            'images': ''
-        },
-        {
-            'title': '3D',
-            'text': {loremIpsum},
-            'images': ''
-        }
-    ];
+    for (var i in Projects) {
+        projectObjects.push(Projects[i]);
+    };
 
     const projectTitles = [];
 
-    for (let i = 0; i < projectObjects.length; i++) {
-        const element = projectObjects[i];
-        projectTitles.push(element.title);
+    function produceProjectTitleLinks() {
+        for (let i = 0; i < projectObjects.length; i++) {
+            const element = projectObjects[i];
+            projectTitles.push(element.title);
+        }
     };
 
+    produceProjectTitleLinks();
+
     const projectTitleLinks = projectTitles.map((projectTitles) => 
-       <li>{projectTitles}</li>
-    )
+    <li>{projectTitles}</li>);
+
     return ( 
         <div className="section-container">
             <div className="section-title no-select">
@@ -63,13 +33,7 @@ const ProjectSection = () => {
                         {projectTitleLinks}
                     </ul>
                 </div>
-                <div className="project-window">
-                    <div className="project-text">
-                        <h2>Test Title</h2>
-                        <p>{loremIpsum}</p>
-                    </div>
-                    <div className="project-images horizontal-center vertical-center"><p>project-images</p></div>
-                </div>
+                <ProjectWindow />
             </div>
         </div>
     );
