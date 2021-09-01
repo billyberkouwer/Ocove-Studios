@@ -253,3 +253,36 @@ p {
   background-color: #db3752;
   text-align: center;
 }
+
+/*SERVICES SECTION*/
+
+.services-container {
+  margin: 20px;
+}
+
+.service-icon-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.service-icon {
+  margin: 30px;
+  width: 280px; 
+  height: 280px;
+  background-color: #db3752;
+}
+
+.enquire-button button {
+  background-color: #346d67;
+  color: white;
+  border-color: white;
+  border-radius: 0px;
+
+  padding: 15px 90px;
+  margin: 17px;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 1.7em
+}
