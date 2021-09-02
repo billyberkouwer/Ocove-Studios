@@ -28,7 +28,7 @@ const ProjectSection = () => {
     const [project, setProject] = useState('');
 
     const projectTitleLinks = projectTitles.map((projectTitles, index) => 
-    <li onClick={() => setProject(index)}>{projectTitles}</li>);
+    <li key={projectTitles} onClick={() => setProject(index)}>{projectTitles}</li>);
 
     return ( 
         <div className="section-container">
