@@ -4,7 +4,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 const ServiceSection = () => {
 
     return ( 
-        <div className="section-container">
+        <div className="section-container yellow-theme">
             <div className="section-title no-select">
                 <h1>Services</h1>
             </div>

@@ -4,7 +4,7 @@ const ProjectSection = () => {
 
     return ( 
         <div className="section-container">
-            <div className="section-title no-select">
+            <div className="section-title project-title no-select">
                 <h1>Projects</h1>
             </div>
             <div className="project-container horizontal-center">
