@@ -1,6 +1,9 @@
 import Projects from './projects.json';
 
 const ProjectWindow = ( project ) => {
+
+    /* --- COMPOSE DATA --- */
+
     const projectObjects = [];
 
     for (var i in Projects) {
@@ -22,34 +25,22 @@ const ProjectWindow = ( project ) => {
 
     produceProjectArrays();
 
+    /* --- DYNAMICALLY SET PROJECTS --- */
+
     const allProjectTitles = projectTitles.map((projectTitles) => <h2>{projectTitles}</h2>);
     const allProjectText = projectText.map((projectText) => <p>{projectText}</p>);
     let projectArray = Object.values(project);
     let projectTitleContent = allProjectTitles[0];
     let projectTextContent = allProjectText[0];
 
-    if (projectArray[0] === 0) {
-        projectTitleContent = allProjectTitles[0];
-        projectTextContent = allProjectText[0]
-    }   else if (projectArray[0] === 1) {
-        projectTitleContent = allProjectTitles[1];
-        projectTextContent = allProjectText[1]
-    }   else if (projectArray[0] === 2) {
-        projectTitleContent = allProjectTitles[2];
-        projectTextContent = allProjectText[2]
-    }   else if (projectArray[0] === 3) {
-        projectTitleContent = allProjectTitles[3];
-        projectTextContent = allProjectText[3]
-    }   else if (projectArray[0] === 4) {
-        projectTitleContent = allProjectTitles[4];
-        projectTextContent = allProjectText[4]
-    }   else if (projectArray[0] === 5) {
-        projectTitleContent = allProjectTitles[5];
-        projectTextContent = allProjectText[5]
-    }   else if (projectArray[0] === 6) {
-        projectTitleContent = allProjectTitles[6];
-        projectTextContent = allProjectText[6]
-    }
+    for (let i = 0; i < allProjectTitles.length; i++) {
+        const title = allProjectTitles[i];
+        const text = allProjectText[i]
+        if (projectArray[0] === i) {
+            projectTitleContent = title;
+            projectTextContent = text;
+        };
+    };
 
     return ( 
         <div className="project-window">
