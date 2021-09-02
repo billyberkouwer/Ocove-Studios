@@ -11,6 +11,12 @@ const ServiceSection = () => {
             <div className="services-container vertical-center">
                 <div className="service-icon-container horizontal-center">
                     <div className="service-icon web-icon">
+                        <Canvas>
+                            <mesh>
+                                <boxBufferGeometry attach="geometry" args={[3,3,3]}/>
+                                <meshStandardMaterial attach="material" />
+                            </mesh>
+                        </Canvas>
                     </div>
                     <div className="service-name">
                         <h2>website development</h2>
@@ -18,7 +24,12 @@ const ServiceSection = () => {
                 </div>
                 <div className="service-icon-container horizontal-center">
                     <div className="service-icon 3d-icon"> 
-
+                        <Canvas>
+                            <mesh>
+                                <boxBufferGeometry attach="geometry" args={[3,3,3]}/>
+                                <meshStandardMaterial attach="material" />
+                            </mesh>
+                        </Canvas>
                     </div>
                     <div className="service-name">
                         <h2>3d modelling & rendering</h2>
@@ -26,6 +37,12 @@ const ServiceSection = () => {
                 </div>
                 <div className="service-icon-container horizontal-center">
                     <div className="service-icon video-icon">
+                        <Canvas>
+                            <mesh>
+                                <boxBufferGeometry attach="geometry" args={[3,3,3]}/>
+                                <meshStandardMaterial attach="material" />
+                            </mesh>
+                        </Canvas>
                     </div>
                     <div className="service-name">
                         <h2>video production</h2>
