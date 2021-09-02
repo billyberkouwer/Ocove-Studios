@@ -207,6 +207,7 @@ p {
 
 .project-menu {
   box-sizing: border-box;
+  font-family: Averta;
   display: flex;
   align-items: center;
   width: 30%;
