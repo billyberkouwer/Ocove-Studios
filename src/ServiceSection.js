@@ -1,3 +1,5 @@
+import React, { useRef, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 
 const ServiceSection = () => {
 
@@ -15,7 +17,8 @@ const ServiceSection = () => {
                     </div>
                 </div>
                 <div className="service-icon-container horizontal-center">
-                    <div className="service-icon 3d-icon">
+                    <div className="service-icon 3d-icon"> 
+
                     </div>
                     <div className="service-name">
                         <h2>3d modelling & rendering</h2>
