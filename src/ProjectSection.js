@@ -3,6 +3,9 @@ import Projects from './projects.json';
 import { useState } from "react";
 
 const ProjectSection = () => {
+
+    /* --- PRODUCE PROJECT LINKS --- */
+
     const projectObjects = [];
 
     for (var i in Projects) {
@@ -19,6 +22,8 @@ const ProjectSection = () => {
     };
 
     produceProjectTitleLinks();
+
+    /* --- STATEFUL PROJECT LINKS --- */
 
     const [project, setProject] = useState('');
 
