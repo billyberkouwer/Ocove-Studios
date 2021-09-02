@@ -1,5 +1,6 @@
 import ProjectWindow from "./ProjectWindow";
 import Projects from './projects.json';
+import { useState } from "react";
 
 const ProjectSection = () => {
     const projectObjects = [];
@@ -14,13 +15,15 @@ const ProjectSection = () => {
         for (let i = 0; i < projectObjects.length; i++) {
             const element = projectObjects[i];
             projectTitles.push(element.title);
-        }
+        };
     };
 
     produceProjectTitleLinks();
 
-    const projectTitleLinks = projectTitles.map((projectTitles) => 
-    <li>{projectTitles}</li>);
+    const [project, setProject] = useState('');
+
+    const projectTitleLinks = projectTitles.map((projectTitles, index) => 
+    <li onClick={() => setProject(index)}>{projectTitles}</li>);
 
     return ( 
         <div className="section-container">
@@ -33,7 +36,7 @@ const ProjectSection = () => {
                         {projectTitleLinks}
                     </ul>
                 </div>
-                <ProjectWindow />
+                <ProjectWindow project={project}/>
             </div>
         </div>
     );
