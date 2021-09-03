@@ -12,11 +12,13 @@ const ServiceIcon = () => {
         );             
     }
 
-const IconCanvas = () => {
+function IconCanvas () {
     return (
+        <>
         <Canvas>
             <ServiceIcon />
         </Canvas>
+        </>
         )
     }
 

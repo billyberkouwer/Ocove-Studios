@@ -18,7 +18,7 @@ const ServiceSection = () => {
                 </div>
                 <div className="service-icon-container horizontal-center">
                     <div className="service-icon 3d-icon"> 
-                        
+                    <ServiceIcon/>
                     </div>
                     <div className="service-name">
                         <h2>3d modelling & rendering</h2>
@@ -26,7 +26,7 @@ const ServiceSection = () => {
                 </div>
                 <div className="service-icon-container horizontal-center">
                     <div className="service-icon video-icon">
-    
+                    <ServiceIcon/>
                     </div>
                     <div className="service-name">
                         <h2>video production</h2>
