@@ -19,11 +19,9 @@ const Navbar = () => {
     changeNavBackground();
 
     const sectionNames = [
-        'Home',
-        'Projects',
-        'Services',
-        'About',
-        'Contact'
+        'PROJECTS',
+        'SERVICES',
+        'CONTACT'
     ];
 
     const navLinks = sectionNames.map((sectionNames) => 
