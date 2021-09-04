@@ -11,14 +11,14 @@ const HomeSection = () => {
 
     function displaceText() {
         setInterval(function() {
-                if (window.scrollY < 80) {
+                if (window.scrollY < 60) {
                     setTextDisplace('translate(-10%)');
                     setTextFade('0')
                 } else {
                     setTextDisplace('translate(0%)');
                     setTextFade('1')
                 };
-            }, 300);
+            }, 200);
         };
     
     displaceText();
