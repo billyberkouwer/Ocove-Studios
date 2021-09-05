@@ -19,13 +19,6 @@ const Navbar = () => {
 
     changeNavBackground();
 
-    const sectionNames = [
-        'Home',
-        'Projects',
-        'Services',
-        'Contact'
-    ];
-
     return ( 
         <div className="navbar" style={{backgroundColor: navBackground}}>
             <ul className="nav-links">
