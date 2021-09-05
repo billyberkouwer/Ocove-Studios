@@ -23,7 +23,6 @@ const Navbar = () => {
         'Home',
         'Projects',
         'Services',
-        'About',
         'Contact'
     ];
 
