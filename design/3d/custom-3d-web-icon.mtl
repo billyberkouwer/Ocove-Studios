@@ -1,0 +1,12 @@
+# Blender MTL File: 'custom-3d-web-icon.blend'
+# Material Count: 1
+
+newmtl Material.001
+Ns 225.000000
+Ka 0.547727 0.547727 0.547727
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.063344 0.189345 1.000000
+Ni 1.450000
+d 1.000000
+illum 3
