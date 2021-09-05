@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -18,23 +19,14 @@ const Navbar = () => {
 
     changeNavBackground();
 
-    const sectionNames = [
-        'Home',
-        'Projects',
-        'Services',
-        'About',
-        'Contact'
-    ];
-
-    const navLinks = sectionNames.map((sectionNames) => 
-        <li key={sectionNames}><a href='/'>{sectionNames}</a></li>
-    );
-
     return ( 
         <div className="navbar" style={{backgroundColor: navBackground}}>
             <ul className="nav-links">
                 <div className="horizontal-line"></div>
-                {navLinks}
+                <li key="homepage"><Link to="/">Home</Link></li>
+                <li key="projects"><Link to="/projects">Projects</Link></li>
+                <li key="services"><Link to="/services">Services</Link></li>
+                <li key="contact"><Link to="/contact">Contact</Link></li>
             </ul>
         </div>
      );
