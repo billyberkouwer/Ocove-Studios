@@ -125,6 +125,7 @@ p {
   font-weight: 400;
   color: white;
   line-height: (100px + 4vw);
+  letter-spacing: 0.13vw;
 }
 
 /* SECTIONS */
@@ -182,8 +183,6 @@ p {
 
 .project-menu ul {
   list-style-type: none;
- 
-
 }
 
 .project-menu li {
