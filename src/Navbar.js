@@ -34,7 +34,10 @@ const Navbar = () => {
         <div className="navbar" style={{backgroundColor: navBackground}}>
             <ul className="nav-links">
                 <div className="horizontal-line"></div>
-                {navLinks}
+                <li key="homepage"><Link to="/">Home</Link></li>
+                <li key="projects"><Link to="/projects">Projects</Link></li>
+                <li key="services"><Link to="/services">Services</Link></li>
+                <li key="contact"><Link to="/contact">Contact</Link></li>
             </ul>
         </div>
      );

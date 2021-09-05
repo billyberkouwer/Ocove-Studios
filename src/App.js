@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <div className="global-container">
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <HomeSection />
           </Route>
           <Route path="/projects">
