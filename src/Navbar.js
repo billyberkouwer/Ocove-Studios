@@ -2,9 +2,9 @@ import { useState } from "react";
 
 const Navbar = () => {
 
-    const [navBackground, setNavBackground] = useState('rgba(0,0,0 )');
-    const bg1 = 'rgba(0,0,0 )';
-    const bg2 = 'rgba(0,0,0 )';
+    const [navBackground, setNavBackground] = useState('rgba(255,255,255,  )');
+    const bg1 = 'rgba(255,255,255, )';
+    const bg2 = 'rgba(255,255,255, )';
 
     function changeNavBackground() {
         setInterval(function() {
