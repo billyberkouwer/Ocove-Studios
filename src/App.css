@@ -11,6 +11,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap');
 
 /* BASE STYLES */
 
@@ -20,8 +21,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, li, a {
-  font-family: Averta;
-}
+  font-family: 'IBM Plex Sans Arabic', sans-serif;}
 
 p {
   font-family: Baskerville;
@@ -34,6 +34,7 @@ p {
 }
 
 .global-container {
+  background-color: black;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -74,7 +75,6 @@ p {
   width: 100%;
   padding: 10px 10px 10px 0px;
   z-index: 1;
-  transition: background-color .5s;
   color: #091022;
   font-family: Averta;
   font-size: 1.2rem;
@@ -130,6 +130,8 @@ p {
 /* SECTIONS */
 
 .section-container {
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: calc(100vh - 40px);
   width: 100%;
@@ -140,10 +142,12 @@ p {
   position: relative;
   height: 10%;
   width: 100%;
-  background-color: white;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .section-title h1 {
@@ -155,13 +159,13 @@ p {
 /* PROJECTS SECTION */
 
 .project-container {
-  height: 90%;
-  width: 100%;
-  background-color: #346d67;
+  height: 100%;
+  width: 95%;
+  background-color: #B8D8F5;
 }
 
 .project-title {
-  color: #346d67;
+  color: #B8D8F5;
 }
 
 .project-menu {
@@ -172,12 +176,14 @@ p {
   width: 30%;
   height: 80%;
   margin: 3%;
-  color: white;
+  color: black;
   font-size: 1.25em;
 }
 
 .project-menu ul {
   list-style-type: none;
+ 
+
 }
 
 .project-menu li {
@@ -197,7 +203,7 @@ p {
   align-items: center;
   height: 90%;
   margin: 20px;
-  background-color: #e0f6f4;
+  background: radial-gradient( #EBC68A, #B8D8F5 70%);;
   box-sizing: border-box;
 }
 
@@ -205,7 +211,7 @@ p {
   box-sizing: border-box;
   width: 50%;
   margin: 10px;
-  height: calc(100% - 20px);
+  height: calc(100% - 30px);
   color: #18322f;
 }
 
@@ -216,17 +222,20 @@ p {
 
 /*SERVICES SECTION*/
 
-.yellow-theme {
-  background-color: #ce913e;
+.services-title h1 {
+  color: #F7F0E4;
 }
-
-.yellow-theme h1 {
-  color: #ce913e;
+.services-section {
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  background: radial-gradient(#85b0df, #F7F0E4 60%);;
+  margin-bottom: 7%;
 }
 
 .services-container {
   margin: 20px;
-  color: #dee2ff;
+  color: #353535;
 }
 
 .service-icon-container {
@@ -239,13 +248,12 @@ p {
   margin: 30px;
   width: 280px; 
   height: 280px;
-  background-color: #dee2ff;
 }
 
 .enquire-button button {
-  background-color: #ce913e;
-  color: #dee2ff;
-  border-color: #dee2ff;
+  background-color: #F7F0E4;
+  color: #353535;
+  border-color: #353535;
   border-radius: 0px;
   border-style: solid;
 
@@ -260,6 +268,6 @@ p {
 }
 
 .enquire-button button:hover {
-  color: #ce913e;
-  background-color: #dee2ff;;
+  color: #353535;
+  background-color: #EBC78A;
 }

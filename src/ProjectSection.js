@@ -31,7 +31,7 @@ const ProjectSection = () => {
     <li key={projectTitles} onClick={() => setProject(index)}>{projectTitles}</li>);
 
     return ( 
-        <div className="section-container">
+        <div className="section-container horizontal-center vertical-center">
             <div className="section-title project-title no-select">
                 <h1>Projects</h1>
             </div>

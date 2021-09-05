@@ -3,10 +3,11 @@ import ServiceIcon from "./ServiceIcon.js"
 const ServiceSection = () => {
 
     return ( 
-        <div className="section-container yellow-theme">
-            <div className="section-title no-select">
+        <div className="section-container horizontal-center vertical-center">
+            <div className="section-title services-title no-select">
                 <h1>Services</h1>
             </div>
+            <div className="services-section">
             <div className="services-container vertical-center">
                 <div className="service-icon-container horizontal-center">
                     <div className="service-icon web-icon">
@@ -21,7 +22,7 @@ const ServiceSection = () => {
                     <ServiceIcon/>
                     </div>
                     <div className="service-name">
-                        <h2>3d modelling & rendering</h2>
+                        <h2>3d modelling + rendering</h2>
                     </div>
                 </div>
                 <div className="service-icon-container horizontal-center">
@@ -38,6 +39,7 @@ const ServiceSection = () => {
                     <button>ENQUIRE</button>
                 </div>
             </div> 
+            </div>
         </div>
         );      
 
