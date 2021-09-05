@@ -26,10 +26,6 @@ const Navbar = () => {
         'Contact'
     ];
 
-    const navLinks = sectionNames.map((sectionNames) => 
-        <li key={sectionNames}><Link to={`/${sectionNames}`}>{sectionNames}</Link></li>
-    );
-
     return ( 
         <div className="navbar" style={{backgroundColor: navBackground}}>
             <ul className="nav-links">
