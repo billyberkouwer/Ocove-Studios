@@ -7,12 +7,12 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 function App() { 
 
   return (
-    <Router>
+    <Router >
       <div className="wrapper">
         <Navbar />
         <div className="global-container">
         <Switch>
-          <Route exact path="/">
+          <Route path="/home">
             <HomeSection />
           </Route>
           <Route path="/projects">

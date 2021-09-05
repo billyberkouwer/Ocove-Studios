@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -27,7 +28,7 @@ const Navbar = () => {
     ];
 
     const navLinks = sectionNames.map((sectionNames) => 
-        <li key={sectionNames}><a href='/'>{sectionNames}</a></li>
+        <li key={sectionNames}><Link to={`/${sectionNames}`}>{sectionNames}</Link></li>
     );
 
     return ( 
