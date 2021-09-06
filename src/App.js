@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './Navbar';
 import HomeSection from './HomeSection';
 import ProjectSection from './ProjectSection';
+import ServiceSection from './ServiceSection';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() { 
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/projects">
             <ProjectSection />
+          </Route>
+          <Route path="/services">
+            <ServiceSection />
           </Route>
         </Switch>
         </div>

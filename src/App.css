@@ -17,7 +17,7 @@
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, li, a {
   font-family: Averta;
 }
 
@@ -253,4 +253,54 @@ p {
 .project-images {
   background-color: #db3752;
   text-align: center;
+}
+
+/*SERVICES SECTION*/
+
+.yellow-theme {
+  background-color: #ce913e;
+}
+
+.yellow-theme h1 {
+  color: #ce913e;
+}
+
+.services-container {
+  margin: 20px;
+  color: #dee2ff;
+}
+
+.service-icon-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.service-icon {
+  margin: 30px;
+  width: 280px; 
+  height: 280px;
+  background-color: #dee2ff;
+}
+
+.enquire-button button {
+  background-color: #ce913e;
+  color: #dee2ff;
+  border-color: #dee2ff;
+  border-radius: 0px;
+  border-style: solid;
+
+  padding: 15px 90px;
+  margin: 17px;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 1.7em;
+  
+  transition: ease-in-out .3s;
+}
+
+.enquire-button button:hover {
+  color: #ce913e;
+  background-color: #dee2ff;;
 }
