@@ -11,14 +11,14 @@ function App() {
       <div className="wrapper">
         <Navbar />
         <div className="global-container">
-        <Switch>
-          <Route exact path="/">
-            <HomeSection />
-          </Route>
-          <Route path="/projects">
-            <ProjectSection />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route exact path="/">
+              <HomeSection />
+            </Route>
+            <Route path="/projects">
+              <ProjectSection />
+            </Route>
+          </Switch>
         </div>
       </div>
     </Router>
