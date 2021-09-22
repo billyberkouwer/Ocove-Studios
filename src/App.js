@@ -1,9 +1,9 @@
 import './App.css';
 import Navbar from './Navbar';
-import HomeSection from './HomeSection';
 import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import LandingPage from './LandingPage';
 
 function App() { 
 
@@ -14,7 +14,7 @@ function App() {
         <div className="global-container">
         <Switch>
           <Route exact path="/">
-            <HomeSection />
+            <LandingPage />
           </Route>
           <Route path="/projects">
             <ProjectSection />
