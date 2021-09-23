@@ -1,7 +1,5 @@
 const LandingPage = () => {
 
-
-
     return ( 
         <div className="section-container">
             <div className="landing-page-bg"></div>
