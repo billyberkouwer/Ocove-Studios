@@ -101,28 +101,6 @@ p {
   opacity: .5;
 }
 
-/* LANDING PAGE */
-
-.landing-page-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.brand-tag, .brand-name {
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 3em;
-  width: 100%;
-}
-
-.brand-tag {
-  font-size: 2em;
-}
-
 /* SECTIONS */
 
 .section-container {
@@ -146,6 +124,51 @@ p {
   position: relative;
   font-size: 2em;
   text-transform: uppercase;
+}
+
+/* LANDING PAGE */
+
+.ocove-logo {
+  height: 36px;
+  padding: 5px;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+.landing-page-bg {
+  background: rgb(223, 223, 223);
+  background: linear-gradient(160deg, rgb(223, 223, 223) 0%, rgb(189, 189, 189) 100%);
+  background-image: url(./assets/glass-structure-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: inherit;
+  width: inherit;
+  opacity: .3;
+}
+
+.landing-page-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.brand-name {
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 22mm;
+  font-size: 5.4em;
+  width: 100%;
+}
+
+.brand-tag {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.9em;
+  width: 100%;
 }
 
 /* PROJECTS SECTION */
