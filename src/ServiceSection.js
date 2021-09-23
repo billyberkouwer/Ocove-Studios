@@ -3,7 +3,7 @@ import ServiceIcon from "./ServiceIcon.js"
 const ServiceSection = () => {
 
     return ( 
-        <div className="section-container yellow-theme">
+        <div className="section-container section-theme">
             <div className="section-title no-select">
                 <h1>Services</h1>
             </div>
