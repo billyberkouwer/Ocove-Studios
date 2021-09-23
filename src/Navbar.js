@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from './assets/logo.png';
 
 const Navbar = () => {
 
@@ -22,6 +23,7 @@ const Navbar = () => {
     return ( 
         <div className="navbar" style={{backgroundColor: navBackground}}>
             <ul className="nav-links">
+                <img alt="Ocove logo" src={logo} className="ocove-logo"></img>
                 <div className="horizontal-line"></div>
                 <li key="homepage"><Link to="/">Home</Link></li>
                 <li key="projects"><Link to="/projects">Projects</Link></li>
