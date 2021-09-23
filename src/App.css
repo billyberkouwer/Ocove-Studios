@@ -174,8 +174,12 @@ p {
 /* PROJECTS SECTION */
 
 .project-theme {
-  background-color: #346d67;
-  color: #346d67;
+  background: rgba(231,236,241,1);
+  background: -moz-linear-gradient(270deg, rgba(242,244,246,0.09987745098039214) 0%, rgba(231,236,241,0.5816701680672269) 60%, rgba(231,236,241,1) 100%);
+  background: -webkit-linear-gradient(270deg, rgba(242,244,246,0.09987745098039214) 0%, rgba(231,236,241,0.5816701680672269) 60%, rgba(231,236,241,1) 100%);
+  background: linear-gradient(270deg, rgba(242,244,246,0.09987745098039214) 0%, rgba(231,236,241,0.5816701680672269) 60%, rgba(231,236,241,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2f4f6",endColorstr="#e7ecf1",GradientType=1);
+  color: #35393d;
 }
 
 .project-container {
@@ -190,8 +194,7 @@ p {
   align-items: center;
   width: 30%;
   height: 80%;
-  margin: 3%;
-  color: white;
+  margin-left: 40px;
   font-size: 1.25em;
 }
 
@@ -214,9 +217,8 @@ p {
   position: relative;
   display: flex;
   align-items: center;
-  height: 90%;
-  margin: 20px;
-  background-color: #e0f6f4;
+  margin: 30px;
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -224,13 +226,12 @@ p {
   box-sizing: border-box;
   width: 50%;
   margin: 10px;
-  height: calc(100% - 20px);
-  color: #18322f;
+  height: 90%;
 }
 
 .project-images {
-  background-color: #db3752;
   text-align: center;
+  background-color: rgb(186, 196, 206);
 }
 
 /*SERVICES SECTION*/
