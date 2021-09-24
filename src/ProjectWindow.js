@@ -1,4 +1,5 @@
 import Projects from './projects.json';
+import { useState, useEffect } from 'react';
 
 const ProjectWindow = ( project ) => {
 
@@ -29,14 +30,16 @@ const ProjectWindow = ( project ) => {
 
     const allProjectTitles = projectTitles.map((projectTitles) => <h2>{projectTitles}</h2>);
     const allProjectText = projectText.map((projectText) => <p>{projectText}</p>);
-    let projectArray = Object.values(project);
+    const projectIndex = Object.values(project);
     let projectTitleContent = allProjectTitles[0];
     let projectTextContent = allProjectText[0];
 
+    console.log(projectIndex[0]);
+
     for (let i = 0; i < allProjectTitles.length; i++) {
         const title = allProjectTitles[i];
-        const text = allProjectText[i]
-        if (projectArray[0] === i) {
+        const text = allProjectText[i];
+        if (projectIndex[0] === i) {
             projectTitleContent = title;
             projectTextContent = text;
         };

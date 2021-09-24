@@ -220,6 +220,7 @@ p {
   width: 50%;
   margin: 10px;
   height: 90%;
+  transition: opacity .5s;
 }
 
 .project-images {
