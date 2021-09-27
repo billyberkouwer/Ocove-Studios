@@ -1,6 +1,6 @@
 import Projects from './projects.json';
 
-const ProjectWindow = ( project ) => {
+const ProjectWindow = (project) => {
 
     /* --- COMPOSE DATA --- */
 
@@ -33,7 +33,6 @@ const ProjectWindow = ( project ) => {
     let projectTitleContent = allProjectTitles[0];
     let projectTextContent = allProjectText[0];
 
-    console.log(projectIndex[0]);
 
     for (let i = 0; i < allProjectTitles.length; i++) {
         const title = allProjectTitles[i];
