@@ -1,5 +1,4 @@
 import Projects from './projects.json';
-import { useState, useEffect } from 'react';
 
 const ProjectWindow = ( project ) => {
 
