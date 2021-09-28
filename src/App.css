@@ -213,6 +213,7 @@ p {
   margin: 30px;
   height: 100%;
   box-sizing: border-box;
+  transition: ease .5s;
 }
 
 .project-text, .project-images {
