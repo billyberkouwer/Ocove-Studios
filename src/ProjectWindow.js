@@ -1,53 +1,26 @@
-import Projects from './projects.json';
+import { useEffect, useState } from "react";
 
-const ProjectWindow = (project) => {
+const ProjectWindow = ( props ) => {
 
-    /* --- COMPOSE DATA --- */
+    const projectTitleContent = Object.values(props.projectTitleContent);
+    const projectTextContent = Object.values(props.projectTextContent);
+    const [fade, setFade] = useState('0');
+    const [translation, setTranslation] = useState('translateX(5%)');
 
-    const projectObjects = [];
-
-    for (var i in Projects) {
-        projectObjects.push(Projects[i]);
-    };
-
-    const projectTitles = [];
-    const projectText = [];
-    const projectImages = [];
-
-    function produceProjectArrays() {
-        for (let i = 0; i < projectObjects.length; i++) {
-            const element = projectObjects[i];
-            projectTitles.push(element.title);
-            projectText.push(element.text);
-            projectImages.push(element.images);
-        }
-    };
-
-    produceProjectArrays();
-
-    /* --- DYNAMICALLY SET PROJECTS --- */
-
-    const allProjectTitles = projectTitles.map((projectTitles) => <h2>{projectTitles}</h2>);
-    const allProjectText = projectText.map((projectText) => <p>{projectText}</p>);
-    const projectIndex = Object.values(project);
-    let projectTitleContent = allProjectTitles[0];
-    let projectTextContent = allProjectText[0];
-
-
-    for (let i = 0; i < allProjectTitles.length; i++) {
-        const title = allProjectTitles[i];
-        const text = allProjectText[i];
-        if (projectIndex[0] === i) {
-            projectTitleContent = title;
-            projectTextContent = text;
-        };
-    };
+    useEffect(() => {
+        setFade('0');
+        setTranslation('translateX(5%)');
+        setTimeout(function(){
+            setFade('1'); 
+            setTranslation('translateX(0%)');
+        }, 500);
+    }, [props.project]);
 
     return ( 
-        <div className="project-window">
+        <div className="project-window" style={{opacity: fade, transform: translation}}>
             <div className="project-text">
-                {projectTitleContent}
-                {projectTextContent}
+                <h2>{projectTitleContent}</h2>
+                <p>{projectTextContent}</p>
             </div>
             <div className="project-images horizontal-center vertical-center">
                 <p>project-images</p>

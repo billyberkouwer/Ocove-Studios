@@ -213,6 +213,7 @@ p {
   margin: 30px;
   height: 100%;
   box-sizing: border-box;
+  transition: ease .5s;
 }
 
 .project-text, .project-images {
@@ -220,7 +221,6 @@ p {
   width: 50%;
   margin: 10px;
   height: 90%;
-  transition: opacity .5s;
 }
 
 .project-images {
