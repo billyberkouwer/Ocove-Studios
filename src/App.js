@@ -4,6 +4,7 @@ import Projects from './projects.json';
 import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import LandingPage from './LandingPage';
 
 function App() { 
@@ -35,17 +36,27 @@ function App() {
       <div className="wrapper">
         <Navbar />
         <div className="global-container">
-        <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-          <Route path="/projects">
-            <ProjectSection projectTitles={projectTitles} projectText={projectText} />
-          </Route>
-          <Route path="/services">
-            <ServiceSection />
-          </Route>
-        </Switch>
+        <Route render={({location}) => (
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={300}
+              classNames="fade"
+            >
+              <Switch location={location}>
+                <Route exact path="/">
+                  <LandingPage />
+                </Route>
+                <Route path="/projects">
+                  <ProjectSection projectTitles={projectTitles} projectText={projectText} />
+                </Route>
+                <Route path="/services">
+                  <ServiceSection />
+                </Route>
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        )} />
         </div>
       </div>
     </Router>
