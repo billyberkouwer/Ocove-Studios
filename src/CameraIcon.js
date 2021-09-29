@@ -11,7 +11,7 @@ const Model = (props) => {
   return (
         <group ref={group} {...props} dispose={null}>
             <mesh scale={[1.2, 1.2, 0.6]} geometry={nodes.Cube.geometry} >
-                <meshStandardMaterial roughness="0.3" attach="material" color="#b8c8ff" emissiveIntensity="2"/>
+                <meshStandardMaterial roughness="0.3" metalness="0.5" attach="material" color="#DEE7FF" emissiveIntensity="2"/>
             </mesh>
         </group>
   )
