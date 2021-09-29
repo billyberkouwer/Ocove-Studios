@@ -264,17 +264,17 @@ p {
 }
 
 .enquire-button button {
-  border-radius: 30px;
+  border-radius: 25px;
   border-style: solid;
   border-width: 2px;
   border-color: inherit;
 
-  padding: 15px 40px;
+  padding: 10px 30px;
   margin: 17px;
   cursor: pointer;
 
   font-family: inherit;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: 300;
   
   transition: ease-in-out .3s;
