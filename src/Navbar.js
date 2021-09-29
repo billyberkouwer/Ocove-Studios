@@ -1,27 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from './assets/logo.png';
 
 const Navbar = () => {
 
-    const [navBackground, setNavBackground] = useState('rgba(255, 255, 255, 0)');
-    const bg1 = 'rgba(255, 255, 255, 0)';
-    const bg2 = 'rgba(255, 255, 255, 1)';
-
-    function changeNavBackground() {
-        setInterval(function() {
-            if (window.scrollY < 30) {
-                setNavBackground(bg1);
-            } else {
-                setNavBackground(bg2);
-            };
-        }, 200);
-    };
-
-    changeNavBackground();
-
     return ( 
-        <div className="navbar" style={{backgroundColor: navBackground}}>
+        <div className="navbar">
             <ul className="nav-links">
                 <img alt="Ocove logo" src={logo} className="ocove-logo"></img>
                 <div className="horizontal-line"></div>
