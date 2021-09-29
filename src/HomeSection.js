@@ -9,7 +9,7 @@ const HomeSection = () => {
     const [textDisplace, setTextDisplace] = useState('translate(-10%)');
     const [textFade, setTextFade] = useState('0');
 
-    function displaceText() {
+    const displaceText = () =>  {
         setInterval(function() {
                 if (window.scrollY < 60) {
                     setTextDisplace('translate(-10%)');
