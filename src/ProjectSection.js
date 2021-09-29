@@ -25,7 +25,7 @@ const ProjectSection = ( props ) => {
                     projectTextContent.current = projectText[i];
                 };
             };
-        }, 490);
+        }, 495);
     }, [project, projectTitleContent, projectTitles, projectText]);
 
     return ( 
