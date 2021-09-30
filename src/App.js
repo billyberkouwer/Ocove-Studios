@@ -1,11 +1,12 @@
 import './App.css';
-import Navbar from './Navbar';
 import Projects from './projects.json';
 import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import LandingPage from './LandingPage';
+import Navbar from './Navbar';
+import ScrollToTop from './scrollToTop';
 
 function App() { 
     
@@ -32,17 +33,14 @@ function App() {
   produceProjectArrays();
 
   return (
-    <Router >
-      <div className="wrapper">
-        <Navbar />
-        <div className="global-container">
+    <Router>
+    <div className="wrapper">
+      <Navbar />
+      <div className="global-container">
+        <ScrollToTop />
         <Route render={({location}) => (
           <TransitionGroup>
-            <CSSTransition
-              key={location.key}
-              timeout={300}
-              classNames="fade"
-            >
+            <CSSTransition key={location.key} timeout={500} classNames="fade">
               <Switch location={location}>
                 <Route exact path="/">
                   <LandingPage />
@@ -57,9 +55,9 @@ function App() {
             </CSSTransition>
           </TransitionGroup>
         )} />
-        </div>
       </div>
-    </Router>
+    </div>
+  </Router>
   );
 }
 
