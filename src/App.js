@@ -34,30 +34,30 @@ function App() {
 
   return (
     <Router>
-    <div className="wrapper">
-      <Navbar />
-      <div className="global-container">
-        <ScrollToTop />
-        <Route render={({location}) => (
-          <TransitionGroup>
-            <CSSTransition key={location.key} timeout={500} classNames="fade">
-              <Switch location={location}>
-                <Route exact path="/">
-                  <LandingPage />
-                </Route>
-                <Route path="/projects">
-                  <ProjectSection projectTitles={projectTitles} projectText={projectText} />
-                </Route>
-                <Route path="/services">
-                  <ServiceSection />
-                </Route>
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )} />
+      <div className="wrapper">
+        <Navbar />
+        <div className="global-container">
+          <ScrollToTop />
+          <Route render={({location}) => (
+            <TransitionGroup>
+              <CSSTransition key={location.key} timeout={300} classNames="fade">
+                <Switch location={location}>
+                  <Route exact path="/">
+                    <LandingPage />
+                  </Route>
+                  <Route path="/projects">
+                    <ProjectSection projectTitles={projectTitles} projectText={projectText} />
+                  </Route>
+                  <Route path="/services">
+                    <ServiceSection />
+                  </Route>
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )} />
+        </div>
       </div>
-    </div>
-  </Router>
+    </Router>
   );
 }
 
