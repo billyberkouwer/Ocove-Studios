@@ -15,7 +15,7 @@ const LandingPage = () => {
                 console.log(scrollpos.current)
                 setFade('1');
             };
-        }, 200)
+        }, 100)
     }, [])
 
     return ( 
