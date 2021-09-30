@@ -7,7 +7,7 @@ const LandingPage = () => {
 
     useEffect(() => {
         setInterval(function() {
-            const fadeStart = 120;
+            const fadeStart = 100;
             scrollpos.current = window.scrollY;
             if (scrollpos.current < fadeStart) {
                 setFade('0')
