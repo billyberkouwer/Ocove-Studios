@@ -108,6 +108,7 @@ p {
   height: calc(100vh - 38px);
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .section-title {
