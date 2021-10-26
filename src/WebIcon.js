@@ -15,7 +15,7 @@ const Model = (props) => {
             receiveShadow
             geometry={nodes.Sphere.geometry}
             material={materials['Material.001']}
-            scale={[2,2,2]}
+            scale={[1.8,1.8,1.8]}
         />
         </group>
     )
