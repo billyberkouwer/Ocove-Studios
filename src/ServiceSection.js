@@ -1,7 +1,6 @@
 import CameraIcon from "./CameraIcon.js"
 import WebIcon from "./WebIcon.js"
 import ThreeDIcon from "./3dIcon.js"
-import ThreeDebugging from "./ThreeDebugging.js"
 
 
 const ServiceSection = () => {
@@ -14,7 +13,7 @@ const ServiceSection = () => {
             <div className="services-container">
                 <div className="service-icon-container">
                     <div className="service-icon web-icon">
-                        <ThreeDebugging />    {/* 3D and web icons produce a glitch on page
+                        <WebIcon />    {/* 3D and web icons produce a glitch on page
                         refresh and direct url access. Camera works fine. We should investigate
                         this issue */}
                     </div>
@@ -24,7 +23,7 @@ const ServiceSection = () => {
                 </div>
                 <div className="service-icon-container">
                     <div className="service-icon 3d-icon"> 
-                        <ThreeDebugging />    {/* 3D and web icons produce a glitch on page
+                        <ThreeDIcon />    {/* 3D and web icons produce a glitch on page
                         refresh and direct url access. Camera works fine. We should investigate
                         this issue */}
                     </div>
@@ -34,7 +33,7 @@ const ServiceSection = () => {
                 </div>
                 <div className="service-icon-container">
                     <div className="service-icon video-icon">
-                        <ThreeDebugging />    {/* 3D and web icons produce a glitch on page
+                        <CameraIcon />    {/* 3D and web icons produce a glitch on page
                         refresh and direct url access. Camera works fine. We should investigate
                         this issue */}
                     </div>
