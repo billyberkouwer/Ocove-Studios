@@ -9,7 +9,7 @@ const Model = (props) => {
   useFrame(() => (group.current.rotation.y += 0.01));
   return (
         <group ref={group} {...props} dispose={null}>
-            <mesh scale={[1, 1, 0.5]} geometry={nodes.Cube.geometry} >
+            <mesh scale={[1.1, 1.1, 0.55]} geometry={nodes.Cube.geometry} >
                 <meshStandardMaterial roughness="0.3" metalness="0.5" attach="material" color="#DEE7FF" emissiveIntensity="2"/>
             </mesh>
         </group>
