@@ -65,6 +65,16 @@
   justify-content: center;
 }
 
+h2, h3 {
+  font-family: PPEiko-Thin;
+}
+
+h4, label, input, textarea {
+  font-family: NeutralFace;
+  letter-spacing: calc(0.3px + 0.07vw);
+  font-weight: 100;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -92,6 +102,7 @@
 .nav-links li a {
   font-family: NeutralFace;
   font-size: calc(8px + 0.8vw);
+  letter-spacing: calc(0.3px + 0.07vw);
   text-decoration: none;
   color: black;
   transition: opacity .2s;
@@ -207,8 +218,7 @@
   width: 40%;
   height: 75px;
   background-color: white;
-  border: solid 2px grey;
-  border-radius: 20px;
+  border: solid 1.5px black;
   font-family: NeutralFace;
   font-size: calc(8px + 0.8vw);
   letter-spacing: 2px;
@@ -268,6 +278,7 @@
   text-decoration: none;
   margin: 1em 0 1em 0;
   transition: opacity .2s;
+  line-height: calc(15px + 1vw);
 }
 
 .project-menu li:hover {
@@ -299,6 +310,8 @@
 
 .project-text {
   font-family: PPEiko-Thin;
+  font-size: calc(9px + 0.8vw);
+  line-height: calc(15px + 1.5vw);
 }
 
 
@@ -320,11 +333,25 @@
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
+}
+
+.services, .header-container {
+  padding: 1.5vw 4vw;
+}
+
+.services h2 {
+  font-size: calc(25px + 2vw);
+  font-weight: 600;
+}
+
+.services h4 {
+font-size: calc(10px + 0.8vw);
 }
 
 .service-icon-container {
   width: 33%;
-  margin: 5px;
+  /* padding: 0.1vw; */
   box-sizing: border-box;
 }
 
@@ -333,17 +360,75 @@
   height: 50vh;
 }
 
-.service-name h2 {
+/* .service-name h2 {
   font-family: NeutralFace;
   letter-spacing: 1px;
   font-weight: 100;
-}
+} */
 
 .contact-section-1 {
   height: 100vh;
   background-color: white;
 }
 
+.service-options-header {
+  width: 80%;
+  margin: 2vw auto 0 auto;
+}
+
+.service-options-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 80%;
+  margin: 1vw auto 2vw auto;
+}
+
+.service-options-header h4 {
+  font-size: calc(7px + 0.8vw);
+}
+
+.service-option {
+  padding: 10px;
+  margin: 10px 30px 10px 0;
+  border: solid 1.5px black;
+}
+
+.service-option label {
+  font-size: calc(6px + 0.8vw);
+  padding: 10px
+}
+
+.form-container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.form {
+ width: 75%;
+  font-family: NeutralFace;
+}
+
+.form input, textarea {
+  width: 100%;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1.5px black
+}
+
+.form-button {
+  margin: auto;  
+}
+
+.form-button button {
+  background-color: white;
+  border: solid 1.5px black;
+  padding: 15px;
+  font-size: calc(9px + 0.8vw);
+}
 
 /* --- FADE --- */ 
 
