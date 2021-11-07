@@ -90,10 +90,18 @@ const ServiceSection = () => {
 
             <section className="services-3">
                 <div className="header-container no-select">
-                    <h2>Or contect us directly</h2>
-
+                    <h2>Or contact us directly</h2>
                 </div>
-
+                <div className="contact-info-container">
+                </div>
+                <div className="contact-info-photo">
+                </div>
+                <div className="contact-info">
+                </div>
+                <div className="contact-info-photo">
+                </div>
+                <div className="contact-info">
+                </div>
             </section>
 
         </div>

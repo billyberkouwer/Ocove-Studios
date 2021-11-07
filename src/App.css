@@ -430,6 +430,9 @@ font-size: calc(10px + 0.8vw);
   font-size: calc(9px + 0.8vw);
 }
 
+.services-3 {
+  height: 70vh
+}
 /* --- FADE --- */ 
 
 .fade-appear,
