@@ -30,9 +30,6 @@ const ProjectSection = ( props ) => {
 
     return ( 
         <div className="section-container section-theme">
-            <div className="section-title no-select">
-                <h1>Projects</h1>
-            </div>
             <div className="project-container horizontal-center">
                 <div className="project-menu">
                     <ul>

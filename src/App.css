@@ -1,15 +1,4 @@
 /* FONTS */
-
-@font-face {
-  font-family: Averta;
-  src: url(./assets/fonts/AvertaDemoPE-Regular.woff);
-}
-
-@font-face {
-  font-family: Baskerville;
-  src: url(./assets/fonts/baskervi.woff);
-}
-
 @font-face {
   font-family: NeutralFace;
   src: url(./assets/fonts/NeutralFace.otf);
@@ -35,8 +24,6 @@
   margin: 0;
 }
 
-
-
 .wrapper {
   min-height: 100vh;
   width: 100%;
@@ -46,8 +33,8 @@
 .global-container {
   position: relative;
   width: 100%;
-  top: 38px;
   box-sizing: border-box;
+  top: calc(30px + 2.5vw);
 }
 
 .no-select {
@@ -257,6 +244,7 @@
 .project-container {
   height: 90vh;
   width: 100%;
+  position: relative;
 }
 
 .project-menu {
@@ -266,9 +254,10 @@
   display: flex;
   align-items: center;
   width: 30%;
+  max-width: 400px;
   height: 80%;
   margin-left: 40px;
-  font-size: 1.25em;
+  font-size: calc(9px + 0.8vw);
 }
 
 .project-menu ul {
@@ -315,17 +304,17 @@
 
 /*SERVICES SECTION*/
 
-.section-theme {
+/* .section-theme {
   background: rgba(231,236,241,1);
   background: -moz-linear-gradient(270deg, rgba(242,244,246,0.09987745098039214) 0%, rgba(231,236,241,0.5816701680672269) 60%, rgba(231,236,241,1) 100%);
   background: -webkit-linear-gradient(270deg, rgba(242,244,246,0.09987745098039214) 0%, rgba(231,236,241,0.5816701680672269) 60%, rgba(231,236,241,1) 100%);
   background: linear-gradient(270deg, rgba(242,244,246,0.09987745098039214) 0%, rgba(231,236,241,0.5816701680672269) 60%, rgba(231,236,241,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2f4f6",endColorstr="#e7ecf1",GradientType=1);
   color: #35393d;
-}
+} */
 
 .services-container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -345,31 +334,10 @@
 }
 
 .service-name h2 {
+  font-family: NeutralFace;
+  letter-spacing: 1px;
   font-weight: 100;
 }
-
-.enquire-button button {
-  border-radius: 25px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: inherit;
-
-  padding: 10px 30px;
-  margin: 17px;
-  cursor: pointer;
-
-  font-family: inherit;
-  font-size: 1.5em;
-  font-weight: 300;
-  
-  transition: ease-in-out .3s;
-  background-color: rgba(231,236,241,1);
-}
-
-.enquire-button button:hover {
-  background-color: rgb(167, 178, 189);
-}
-
 
 .contact-section-1 {
   height: 100vh;
