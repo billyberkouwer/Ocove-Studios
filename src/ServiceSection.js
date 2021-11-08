@@ -1,7 +1,6 @@
-import CameraIcon from "./CameraIcon.js"
-import WebIcon from "./WebIcon.js"
-import ThreeDIcon from "./3dIcon.js"
-import TestModel from './TestModel.js';
+import NewCameraIcon from "./NewCameraIcon";
+import NewWebIcon from './NewWebIcon.js';
+import New3DIcon from './New3DIcon.js'
 
 
 const ServiceSection = () => {
@@ -14,7 +13,7 @@ const ServiceSection = () => {
             <div className="services-container">
                 <div className="service-icon-container">
                     <div className="service-icon web-icon">
-                        <WebIcon />
+                        <NewWebIcon />
                     </div>
                     <div className="service-name">
                         <h2>website development</h2>
@@ -22,15 +21,15 @@ const ServiceSection = () => {
                 </div>
                 <div className="service-icon-container">
                     <div className="service-icon 3d-icon">    
-                        <TestModel />
+                        <New3DIcon />
                     </div>
                     <div className="service-name">
-                        <h2>3d modelling & rendering</h2>
+                        <h2>3d modelling and rendering</h2>
                     </div>
                 </div>
                 <div className="service-icon-container">
                     <div className="service-icon video-icon">
-                        <CameraIcon />
+                        <NewCameraIcon />
                     </div>
                     <div className="service-name">
                         <h2>video production</h2>
