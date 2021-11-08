@@ -1,20 +1,34 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const LandingPage = () => {
+
+    // ANIMATIONS
 
     const e = useRef();
     const q = gsap.utils.selector(e);
 
-    useEffect  (() => {
-    gsap.from(q(".brand-name-line-1"), {
-        y: 250,
-        duration: 0.5
-    },)
-    gsap.from(q(".brand-name-line-2"), {
-        y: -250,
-        duration: 0.5
-    },)
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        gsap.from(q(".brand-name-line-1"), {
+            y: 250,
+            duration: 0.5
+        })
+        gsap.from(q(".brand-name-line-2"), {
+            y: -250,
+            duration: 0.5
+        })
+
+        ScrollTrigger.create({
+            trigger: ".home-2",
+            pin: true,
+            start: "top top",
+            end: "+=30%"
+        }) 
+
     }, []);
 
     return (
