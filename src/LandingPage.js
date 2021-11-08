@@ -1,25 +1,22 @@
-// import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const LandingPage = () => {
 
-//     const [fade, setFade] = useState('0');
-//     let scrollpos = useRef(0);
+    const e = useRef();
+    const q = gsap.utils.selector(e);
 
-//     useEffect(() => {
-//         setInterval(function () {
-//             const fadeStart = 100;
-//             scrollpos.current = window.scrollY;
-//             if (scrollpos.current < fadeStart) {
-//                 setFade('0')
-//             } else {
-//                 console.log(scrollpos.current)
-//                 setFade('1');
-//             };
-//         }, 100)
-//     }, [])
+    useEffect  (() => {
+    gsap.from(q(".brand-name-line-1"), {
+        y: 250,
+    },)
+    gsap.from(q(".brand-name-line-2"), {
+        y: -250,
+    },)
+    }, []);
 
     return (
-        <div className="home">
+        <div className="home" ref={e}>
             <section className="home-1 wrapper">
                 <div className="brand-name wrapper">
                     <div className="brand-name-line-1 no-select">OCOVE</div>
