@@ -416,7 +416,14 @@ font-size: calc(10px + 0.8vw);
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: solid 1.5px black
+  border-bottom: solid 1.5px black;
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+  font-family: inherit;
+  font-size: calc(6px + 0.8vw);
+  padding: 1vw 0 1vw 0;
 }
 
 .form-button {
