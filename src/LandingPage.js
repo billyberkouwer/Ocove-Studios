@@ -9,9 +9,11 @@ const LandingPage = () => {
     useEffect  (() => {
     gsap.from(q(".brand-name-line-1"), {
         y: 250,
+        duration: 0.5
     },)
     gsap.from(q(".brand-name-line-2"), {
         y: -250,
+        duration: 0.5
     },)
     }, []);
 
