@@ -1,4 +1,5 @@
 // import { useState, useEffect, useRef } from "react";
+import video from './assets/single_loop_video_bg.mp4';
 
 const LandingPage = () => {
 
@@ -20,12 +21,13 @@ const LandingPage = () => {
 
     return (
         <div className="home">
-            <section className="home-1 wrapper">
-                <div className="brand-name wrapper">
-                    <div className="brand-name-line-1 no-select">OCOVE</div>
-                    <div className="brand-name-line-2 no-select">STUDIOS</div>
-                </div>
-            </section>
+                <section className="home-1 wrapper">
+                    <video src={video} autoPlay loop playsinline muted></video>
+                    <div className="brand-name wrapper">
+                        <div className="brand-name-line-1 no-select">OCOVE</div>
+                        <div className="brand-name-line-2 no-select">STUDIOS</div>
+                    </div>
+                </section>
 
             <section className="home-2 wrapper">
                 <div className="info-container-1">
