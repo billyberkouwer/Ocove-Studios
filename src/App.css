@@ -46,9 +46,6 @@
   top: calc(30px + 2.5vw);
 }
 
-
-
-
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -60,7 +57,7 @@
 
 .horizontal-line {
   width: 100%;
-  height: 1px;
+  height: 1.5px;
   margin-right: 10px;
   background-color: black;
 }
@@ -81,7 +78,7 @@ h2, h3 {
   font-family: PPEiko-Thin;
 }
 
-h4, label, input, textarea {
+h4, label, input, textarea, button {
   font-family: NeutralFace;
   letter-spacing: calc(0.3px + 0.07vw);
   font-weight: 100;
@@ -415,38 +412,43 @@ font-size: calc(6px + 0.8vw);
   width: 60%;
   margin: 9vh auto;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-button {
+  position: absolute;
+  margin: 10vw 0 0 0
+}
+
+.form-button button {
+  cursor: pointer;
+  border-left: solid 1.5px black;
+  border-right: solid 1.5px black;
+  border-top: none;
+  border-bottom: none;
+  padding: 1vw 4vw;
+  font-size: calc(9px + 0.8vw);
+  background-color: white;
 }
 
 .form {
- width: 70%;
-  font-family: NeutralFace;
+  width: 70%;
 }
 
 .form input, textarea {
   width: 100%;
-  height: 50px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid 1.5px black;
+  height: 4vw;
+  border: none;
   resize: none;
+  outline: none;
 }
 
 input::placeholder, textarea::placeholder {
   font-family: inherit;
   font-size: calc(6px + 0.8vw);
   padding: 1vw 0 1vw 0;
-}
-
-.form-button {
-  margin: 17vh auto 0 auto;
-}
-
-.form-button button {
-  background-color: white;
-  border: solid 1.5px black;
-  padding: 13px;
-  font-size: calc(9px + 0.8vw);
 }
 
 .services-3 {

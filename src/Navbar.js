@@ -10,11 +10,11 @@ const Navbar = () => {
 
     useEffect(() => {
         gsap.from(q(".nav-link"), {
-            y: -30,
+            y: -15,
             opacity: 0,
             duration: 0.6,
-            stagger: 0.2,
-            delay: 1
+            stagger: 0.18,
+            delay: 1.1
         })
         gsap.from(q(".horizontal-line"), {
             scaleX: 0,

@@ -1,9 +1,81 @@
 import NewCameraIcon from "./NewCameraIcon.js"
 import NewWebIcon from "./NewWebIcon.js"
 import New3DIcon from "./New3DIcon.js"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
 
 
 const ServiceSection = () => {
+
+    const buttonRef = useRef();
+    const formRef = useRef();
+
+    const formLine1 = useRef();
+    const formLine2 = useRef();
+    const formLine3 = useRef();
+
+    const buttonBorder1 = useRef();
+    const buttonBorder2 = useRef();
+
+    const input1 = useRef();
+    const input2 = useRef();
+    const input3 = useRef();
+
+    const tl = gsap.timeline({ paused: true })
+
+    useEffect(() => {
+
+        const lineRef = [
+            formLine1.current,
+            formLine2.current,
+            formLine3.current,
+        ]
+
+        const inputRef = [
+            input1.current,
+            input2.current,
+            input3.current,
+        ]
+
+        const buttonBorder = [
+            buttonBorder1.current,
+            buttonBorder2.current,
+        ]
+
+        tl.to(buttonRef.current, {
+            color: "white",
+            duration: .3
+        })
+            .to(buttonRef.current, {
+                scaleY: 0,
+                transformOrigin: "top",
+                duration: .35,
+            })
+            .to(buttonBorder2.current, {
+                y: -52,
+                duration: .4
+            })
+            .to(buttonBorder, {
+                scaleX: 0,
+                duration: .5
+            })
+            .from(formRef.current, {
+                display: "none",
+                duration: .02
+            })
+            .from(lineRef, {
+                scaleX: 0,
+                transformOrigin: "0%",
+                duration: .5,
+                stagger: .2
+            })
+            .from(inputRef, {
+                y: 10,
+                opacity: 0,
+                duration: .4,
+                stagger: .15
+            })
+    }, [])
 
     return (
         <div className="services">
@@ -30,7 +102,7 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon video-icon">
-                            <NewCameraIcon /> 
+                            <NewCameraIcon />
                         </div>
                         <div className="service-name">
                             <h4>branding</h4>
@@ -45,17 +117,27 @@ const ServiceSection = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="form-container">
-                    <div className="form">
+                    <div className="form-button">
+                        <div className="horizontal-line" ref={buttonBorder1}></div>
+                        <button ref={buttonRef} onClick={() => tl.play()}>Tell Us More</button>
+                        <div className="horizontal-line" ref={buttonBorder2}></div>
+
+                    </div>
+                    <div className="form" ref={formRef}>
                         <form name="contact" method="POST" data-netlify="true">
-                            <input type="text" name="name" placeholder="Name" />
-                            <input type="email" name="email" placeholder="Email" />
-                            <textarea name="message" placeholder="Message"></textarea>
+                            <input ref={input1} type="text" name="name" placeholder="Name" />
+                            <div className="horizontal-line" ref={formLine1}></div>
+                            <input ref={input2} type="email" name="email" placeholder="Email" />
+                            <div className="horizontal-line" ref={formLine2}></div>
+                            <textarea ref={input3} name="message" placeholder="Message"></textarea>
+                            <div className="horizontal-line" ref={formLine3}></div>
                         </form>
                     </div>
-                    <div className="form-button">
+                    {/* <div className="send-button">
                         <button type="submit">SEND</button>
-                    </div>
+                    </div> */}
                 </div>
 
             </section>
