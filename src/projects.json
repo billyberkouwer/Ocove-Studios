@@ -1,37 +1,27 @@
 {
-        "ChappelGalleries": {
-            "title": "Chappel Galleries",
-            "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
-            "images": ""
-        },
-        "JohnHounam": {
-            "title": "John Hounam Fine Art",
-            "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
-            "images": ""
-        },
-        "HelenHoward": {
-            "title": "Helen Howard Ceramics",
-            "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
-            "images": ""
-        },
-        "IsabelKnowland": {
-            "title": "Isabel Knowland Fine Art",
-            "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
-            "images": ""
-        },
-        "CarlucaDecorators": {
-            "title": "Carluca Decorators",
-            "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
-            "images": ""
-        },
-        "DogTreats": {
-            "title": "Dog Treats",
-            "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
-            "images": ""
-        },
-        "3D": {
-            "title": "3D",
-            "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
-            "images": ""
-        }
+    "AutonomicsResearchCentre": {
+        "title": "Autonomics Research Centre",
+        "text": "The Autonomics Research Centre is an art and academic research collective. We provided UI/UX design, website development and creative direction for their online presence and published output.",
+        "images": ""
+    },
+    "ChappelGalleries": {
+        "title": "Chappel Galleries",
+        "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
+        "images": ""
+    },
+    "JohnHounam": {
+        "title": "John Hounam Fine Art",
+        "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
+        "images": ""
+    },
+    "HelenHoward": {
+        "title": "Helen Howard Ceramics",
+        "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
+        "images": ""
+    },
+    "IsabelKnowland": {
+        "title": "Isabel Knowland Fine Art",
+        "text": "Proin gravida nibh vel auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit",
+        "images": ""
+    }
 }
