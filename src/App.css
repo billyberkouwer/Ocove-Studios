@@ -22,6 +22,15 @@
 * {
   padding: 0;
   margin: 0;
+
+  /* hide scrollbars - we can modify this later, maybe add a custom one - otherwise will use CTAs */
+
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display:none;
 }
 
 .wrapper {
@@ -36,6 +45,9 @@
   box-sizing: border-box;
   top: calc(30px + 2.5vw);
 }
+
+
+
 
 .no-select {
   -webkit-touch-callout: none;
@@ -337,27 +349,27 @@ h4, label, input, textarea {
 }
 
 .services, .header-container {
-  padding: 1.5vw 4vw;
+  padding: 1vw 4vw 2vw 4vw;
 }
 
 .services h2 {
   font-size: calc(25px + 2vw);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .services h4 {
-font-size: calc(10px + 0.8vw);
+font-size: calc(6px + 0.8vw);
 }
 
 .service-icon-container {
-  width: 33%;
+  width: 20%;
   /* padding: 0.1vw; */
   box-sizing: border-box;
 }
 
 .service-icon {
   width: 100%;
-  height: 50vh;
+  height: 20vh;
 }
 
 /* .service-name h2 {
@@ -400,13 +412,13 @@ font-size: calc(10px + 0.8vw);
 }
 
 .form-container {
-  width: 70%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 9vh auto;
   display: flex;
 }
 
 .form {
- width: 75%;
+ width: 70%;
   font-family: NeutralFace;
 }
 
@@ -427,19 +439,20 @@ input::placeholder, textarea::placeholder {
 }
 
 .form-button {
-  margin: auto;  
+  margin: 17vh auto 0 auto;
 }
 
 .form-button button {
   background-color: white;
   border: solid 1.5px black;
-  padding: 15px;
+  padding: 13px;
   font-size: calc(9px + 0.8vw);
 }
 
 .services-3 {
   height: 70vh
 }
+
 /* --- FADE --- */ 
 
 .fade-appear,
