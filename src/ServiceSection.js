@@ -1,6 +1,6 @@
-import CameraIcon from "./CameraIcon.js"
-import WebIcon from "./WebIcon.js"
-import ThreeDIcon from "./3dIcon.js"
+import NewCameraIcon from "./NewCameraIcon.js"
+import NewWebIcon from "./NewWebIcon.js"
+import New3DIcon from "./New3DIcon.js"
 
 
 const ServiceSection = () => {
@@ -14,9 +14,7 @@ const ServiceSection = () => {
                 <div className="services-container">
                     <div className="service-icon-container">
                         <div className="service-icon web-icon">
-                            <WebIcon />    {/* 3D and web icons produce a glitch on page
-                        refresh and direct url access. Camera works fine. We should investigate
-                        this issue */}
+                            <NewWebIcon />
                         </div>
                         <div className="service-name">
                             <h4>web development</h4>
@@ -24,9 +22,7 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon 3d-icon">
-                            <ThreeDIcon />    {/* 3D and web icons produce a glitch on page
-                        refresh and direct url access. Camera works fine. We should investigate
-                        this issue */}
+                            <New3DIcon />
                         </div>
                         <div className="service-name">
                             <h4>3d visuals</h4>
@@ -34,9 +30,7 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon video-icon">
-                            <CameraIcon />    {/* 3D and web icons produce a glitch on page
-                        refresh and direct url access. Camera works fine. We should investigate
-                        this issue */}
+                            <NewCameraIcon /> 
                         </div>
                         <div className="service-name">
                             <h4>branding</h4>
@@ -44,9 +38,7 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon video-icon">
-                            <CameraIcon />    {/* 3D and web icons produce a glitch on page
-                        refresh and direct url access. Camera works fine. We should investigate
-                        this issue */}
+                            <NewCameraIcon />
                         </div>
                         <div className="service-name">
                             <h4>video production</h4>
@@ -67,9 +59,6 @@ const ServiceSection = () => {
                 </div>
 
             </section>
-
-
-
 
             <section className="services-3">
                 <div className="header-container no-select">
