@@ -95,7 +95,7 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon 3d-icon">
-                            <New3DIcon />
+                           <New3DIcon /> 
                         </div>
                         <div className="service-name">
                             <h4>3d visuals</h4>

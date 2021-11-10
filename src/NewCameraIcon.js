@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, Suspense } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import Camera from "./assets/3d/camera.glb"
@@ -57,9 +57,11 @@ function ModelCanvas () {
     return (
         <>
         <Canvas>
-            <pointLight position={[10, 10, 10]} />
-            <pointLight position={[-10, -10, 10]} />
-            <Model />
+          <Suspense fallback={null}>
+              <pointLight position={[10, 10, 10]} />
+              <pointLight position={[-10, -10, 10]} />
+              <Model />
+          </Suspense>
         </Canvas>
         </>
     )
