@@ -35,7 +35,8 @@
 
 .wrapper {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -43,7 +44,6 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  top: calc(30px + 2.5vw);
 }
 
 .no-select {
@@ -156,6 +156,16 @@ h4, label, input, textarea, button {
 }
 
 /* LANDING PAGE */
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  opacity: .5;
+  top: 0;
+  left: 0;
+}
 
 .brand-name {
   display: flex;
