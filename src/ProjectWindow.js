@@ -19,7 +19,7 @@ const ProjectWindow = ( props ) => {
     return ( 
         <div className="project-window" style={{opacity: fade, transform: translation}}>
             <div className="project-text">
-                <h2>{projectTitleContent}</h2>
+                <h3>{projectTitleContent}</h3>
                 <p>{projectTextContent}</p>
             </div>
             <div className="project-images horizontal-center vertical-center">
