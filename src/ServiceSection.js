@@ -1,8 +1,9 @@
-import NewCameraIcon from "./NewCameraIcon.js"
-import NewWebIcon from "./NewWebIcon.js"
-import New3DIcon from "./New3DIcon.js"
-import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
+import NewCameraIcon from "./NewCameraIcon.js";
+import NewWebIcon from "./NewWebIcon.js";
+import New3DIcon from "./New3DIcon.js";
+import ThreeLogoTwo from './3dLogoV2.js';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 
 const ServiceSection = () => {
@@ -102,7 +103,7 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon video-icon">
-                            <NewCameraIcon />
+                            <ThreeLogoTwo />
                         </div>
                         <div className="service-name">
                             <h4>branding</h4>

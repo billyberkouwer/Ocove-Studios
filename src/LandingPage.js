@@ -2,8 +2,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ThreeLogo from './3dLogo.js';
-
-// import { useState, useEffect, useRef } from "react";
 import video from './assets/single_loop_video_bg.mp4';
 
 const LandingPage = () => {
