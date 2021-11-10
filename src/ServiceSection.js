@@ -1,9 +1,16 @@
-import NewCameraIcon from "./NewCameraIcon.js";
-import NewWebIcon from "./NewWebIcon.js";
-import New3DIcon from "./New3DIcon.js";
-import ThreeLogoTwo from './3dLogoV2.js';
-import { useEffect, useRef } from "react";
+// import NewWebIcon from "./NewWebIcon.js";
+// import New3DIcon from "./New3DIcon.js";
+// import ThreeLogoTwo from './3dLogoV2.js';
+// import NewCameraIcon from "./NewCameraIcon.js";
+import React, { Suspense, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+
+
+const NewWebIcon = React.lazy(() => import('./NewWebIcon'));
+const New3DIcon = React.lazy(() => import('./New3DIcon'));
+const ThreeLogoTwo = React.lazy(() => import('./3dLogoV2'));
+const NewCameraIcon = React.lazy(() => import('./NewCameraIcon'));
+
 
 
 const ServiceSection = () => {
@@ -76,7 +83,7 @@ const ServiceSection = () => {
                 duration: .4,
                 stagger: .15
             })
-    }, [])
+    })
 
     return (
         <div className="services">
@@ -87,7 +94,9 @@ const ServiceSection = () => {
                 <div className="services-container">
                     <div className="service-icon-container">
                         <div className="service-icon web-icon">
-                            <NewWebIcon />
+                            <Suspense fallback={<h1>...</h1>}>
+                                <NewWebIcon />
+                            </Suspense>
                         </div>
                         <div className="service-name">
                             <h4>web development</h4>
@@ -95,7 +104,10 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon 3d-icon">
-                           <New3DIcon /> 
+                            <Suspense fallback={<h1>...</h1>}>
+                                <New3DIcon />
+                            </Suspense>
+
                         </div>
                         <div className="service-name">
                             <h4>3d visuals</h4>
@@ -103,7 +115,10 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon video-icon">
-                            <ThreeLogoTwo />
+                            <Suspense fallback={<h1>...</h1>}>
+                                <ThreeLogoTwo />
+                            </Suspense>
+
                         </div>
                         <div className="service-name">
                             <h4>branding</h4>
@@ -111,7 +126,10 @@ const ServiceSection = () => {
                     </div>
                     <div className="service-icon-container">
                         <div className="service-icon video-icon">
-                            <NewCameraIcon />
+                            <Suspense fallback={<h1>...</h1>}>
+                                <NewCameraIcon />
+                            </Suspense>
+
                         </div>
                         <div className="service-name">
                             <h4>video production</h4>
