@@ -190,6 +190,7 @@ h4, label, input, textarea, button {
 .info-container-1 p {
   font-family: PPEiko-Medium;
   font-size: calc(18px + 2.8vw);
+  z-index: 1;
   width: 80%;
   margin: 0 auto;
   line-height: calc(28px + 4.5vw);
@@ -232,6 +233,25 @@ h4, label, input, textarea, button {
   font-size: calc(8px + 0.8vw);
   letter-spacing: 2px;
 } 
+
+.three-logo {
+  display: inline;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.three-logo-model {  
+  z-index: 0;   
+  transform: translateX(20%);
+}
+
+.three-logo-overlay {
+  opacity: 1;
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, rgb(255, 255, 255) 10%, rgb(255, 255, 255, 0.5) 35%, rgba(0, 0, 0, 0) 70%);
+  top: 0;
+}
 
 /* .landing-page-bg {
   position: fixed;

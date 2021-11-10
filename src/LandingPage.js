@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ThreeLogo from './3dLogo.js';
 
 
 const LandingPage = () => {
@@ -41,12 +42,14 @@ const LandingPage = () => {
             </section>
 
             <section className="home-2 wrapper">
+                <div className="three-logo three-logo-model">
+                        <ThreeLogo />
+                        <div className="three-logo three-logo-overlay"></div>
+                </div>
                 <div className="info-container-1">
-                    <div>
-                        <p>We are a UK-based freelance collective specialising in website development,
-                            video production and 3D visualisation, providing innovative digital products
-                            for creatives, brands and businesses.</p>
-                    </div>
+                    <p>We are a UK-based freelance collective specialising in website development,
+                        video production and 3D visualisation, providing innovative digital products
+                        for creatives, brands and businesses.</p>
                 </div>
             </section>
 
