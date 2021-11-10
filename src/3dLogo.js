@@ -29,6 +29,7 @@ function ModelCanvas () {
         <Canvas camera={{ fov: 25, near: 0.1, far: 1000, position: [0, 2, 6.5] }}>
             <Suspense fallback={null}>
                 <pointLight position={[20, 20, 10]} />
+                <pointLight position={[10, 10, 5]} />
                 <pointLight position={[-20, -20, 10]} />
                 <pointLight position={[-20, -20, 30]} />
                 <pointLight position={[-20, -20, -30]} />
