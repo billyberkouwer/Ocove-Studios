@@ -223,6 +223,12 @@ h4, label, input, textarea, button {
   width: 70%
 }
 
+#tsparticles {
+  width: 90%;
+  height: 80%;
+  margin: 2vw 1vw
+}
+
 .view-projects-button {
   width: 40%;
   height: 75px;
