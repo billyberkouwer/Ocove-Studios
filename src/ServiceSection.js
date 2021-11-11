@@ -11,8 +11,6 @@ const New3DIcon = React.lazy(() => import('./New3DIcon'));
 const ThreeLogoTwo = React.lazy(() => import('./3dLogoV2'));
 const NewCameraIcon = React.lazy(() => import('./NewCameraIcon'));
 
-
-
 const ServiceSection = () => {
 
     const buttonRef = useRef();
@@ -83,7 +81,8 @@ const ServiceSection = () => {
                 duration: .4,
                 stagger: .15
             })
-    })
+    }, [])
+
 
     return (
         <div className="services">
