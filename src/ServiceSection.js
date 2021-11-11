@@ -79,7 +79,7 @@ const ServiceSection = () => {
     }, [])
 
     return (
-        <div className="services">
+        <div className="services margin-top">
             <section className="services-1 wrapper">
                 <div className="header-container no-select">
                     <h2>What can we do for you?</h2>

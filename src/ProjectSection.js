@@ -29,7 +29,7 @@ const ProjectSection = ( props ) => {
     }, [project, projectTitleContent, projectTitles, projectText]);
 
     return ( 
-        <div className="section-container section-theme">
+        <div className="section-container margin-top">
             <div className="project-container horizontal-center">
                 <div className="project-menu">
                     <ul>
