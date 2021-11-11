@@ -335,28 +335,34 @@ video {
   position: relative;
   display: flex;
   align-items: center;
+  width: 70%;
   margin: 30px;
   height: 100%;
   box-sizing: border-box;
   transition: ease .5s;
 }
 
-.project-text, .project-images {
+.project-text {
   box-sizing: border-box;
   width: 50%;
   margin: 10px;
   height: 90%;
+  font-family: PPEiko-Thin;
+  font-size: calc(9px + 0.8vw);
+  line-height: calc(15px + 1.5vw);
+}
+
+.project-images-container {
+  width: 50%;
+  background-color: red;
+  overflow: hidden;
 }
 
 .project-images {
   text-align: center;
   background-color: rgb(186, 196, 206);
-}
-
-.project-text {
-  font-family: PPEiko-Thin;
-  font-size: calc(9px + 0.8vw);
-  line-height: calc(15px + 1.5vw);
+  width: 100%;
+  height: auto;
 }
 
 

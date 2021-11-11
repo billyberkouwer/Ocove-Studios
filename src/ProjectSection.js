@@ -36,7 +36,7 @@ const ProjectSection = ( props ) => {
                         {projectTitleLinks}
                     </ul>
                 </div>
-                <ProjectWindow project={project} projectTextContent={projectTextContent} projectTitleContent={projectTitleContent}/>
+                <ProjectWindow {...props} project={project} projectTextContent={projectTextContent} projectTitleContent={projectTitleContent} />
             </div>
         </div>
     );

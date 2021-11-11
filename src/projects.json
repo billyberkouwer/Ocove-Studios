@@ -2,7 +2,7 @@
     "AutonomicsResearchCentre": {
         "title": "Autonomics Research Centre",
         "text": "The Autonomics Research Centre is an art and academic research collective. We provided UI/UX design, website development and creative direction for their online presence and published output.",
-        "images": ""
+        "images": ["autonomics/autonomics.jpg", "autonomics/autonomics2.jpg", "autonomics/autonomics3.jpg"]
     },
     "ChappelGalleries": {
         "title": "Chappel Galleries",
