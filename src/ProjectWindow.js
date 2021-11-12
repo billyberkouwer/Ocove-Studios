@@ -43,18 +43,34 @@ const ProjectWindow = ( props ) => {
 
     /* --- SET AND CYCLE IMAGES FROM JSON PATHS --- */
 
+    // Initial project set change (Accounting for animation)
+
+    useEffect(() => {
+        setTimeout(function(){
+            setImage(projectImages[project][imageIteration.current]); 
+        }, 495);
+    }, [project, projectImages, image, imageIteration])
+
+    // Setting images and image cycle
+
     useEffect(() => {
         const imageInterval = setInterval(() => {
-            if (imageIteration.current === projectImages[project].length - 1) {
+            if (imageIteration.current >= projectImages[project].length - 1) {
                 imageIteration.current = 0;
-                setImage(projectImages[project][imageIteration.current]); 
+                setTimeout(function(){
+                    setImage(projectImages[project][imageIteration.current]); 
+                }, 495);
             }   else if (imageIteration.current < projectImages[project].length - 1) {
                 imageIteration.current++;
-                setImage(projectImages[project][imageIteration.current]);
+                setTimeout(function(){
+                    setImage(projectImages[project][imageIteration.current]); 
+                }, 495);
+                console.log(image);
             }
         }, 1500);
-        return () => clearInterval(imageInterval)
+        return () => {clearInterval(imageInterval)}
     }, [project, projectImages, image, imageIteration]);
+
 
     return ( 
         <div className="project-window" style={{opacity: fade, transform: translation}}>

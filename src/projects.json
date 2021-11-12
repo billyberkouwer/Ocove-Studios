@@ -12,7 +12,7 @@
     "JohnHounam": {
         "title": "John Hounam Fine Art",
         "text": "John Hounam is a visual artist based in Oxford, UK. We developed his website, which displays a varied portfolio of watercolours, paintings, drawings and video work.",
-        "images": ""
+        "images": ["jhounam/haldrine-cove_orig.jpg", "jhounam/pont-de-bir-hakeim.jpg", "jhounam/reclining-figure-on-draped-chaise-longue_orig.jpg", "jhounam/work-in-progress.jpg"]
     },
     "HelenHoward": {
         "title": "Helen Howard Ceramics",
