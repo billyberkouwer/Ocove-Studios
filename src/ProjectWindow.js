@@ -27,10 +27,9 @@ const ProjectWindow = ( props ) => {
                     projectTextObject.current = projectText[i];
                 };
             };
-            if (imageIteration.current !== 0) {
-                imageIteration.current = 0;
-                setImage(projectImages[project][imageIteration.current]);
-            };
+            imageIteration.current = 0;
+            console.log(project)
+            setImage(projectImages[project][imageIteration.current]);
         }, 495);
     }, [project, projectImages, projectTitleObject, projectTextObject, projectTitles, projectText]);
 
@@ -55,11 +54,10 @@ const ProjectWindow = ( props ) => {
             }   else if (imageIteration.current < projectImages[project].length - 1) {
                 imageIteration.current++;
                 setImage(projectImages[project][imageIteration.current]);
-                console.log(image);
             }
         }, 1500);
         return () => {clearInterval(imageInterval)}
-    }, [project, projectImages, image, imageIteration]);
+    }, [project, projectImages]);
 
 
     return ( 
