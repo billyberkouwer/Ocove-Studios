@@ -2,11 +2,36 @@ import { useEffect, useState, useRef } from "react";
 
 const ProjectWindow = ( props ) => {
 
+    const projectTitles = props.projectTitles;
+    const projectText = props.projectText;
     const project = props.project;
-    const projectTitleContent = Object.values(props.projectTitleContent);
-    const projectTextContent = Object.values(props.projectTextContent);
+    const projectImages = props.projectImages;
+
     const [fade, setFade] = useState('0');
     const [translation, setTranslation] = useState('translateX(5%)');
+    const projectTitleObject = useRef(projectTitles[0]);
+    const projectTextObject = useRef(projectText[0]);
+    const projectTitleContent = Object.values(projectTitleObject);
+    const projectTextContent = Object.values(projectTextObject);
+
+    const imageIteration = useRef(0);
+    const [image, setImage] = useState(projectImages[0][0]);
+
+    /* --- DYNAMICALLY SET PROJECT CONTENT FROM JSON --- */
+
+    useEffect(() => {
+        setTimeout(function() {
+            for (let i = 0; i < projectTitles.length; i++) {
+                if (project === i) {
+                    projectTitleObject.current = projectTitles[i];
+                    projectTextObject.current = projectText[i];
+                };
+            };
+            
+        }, 495);
+    }, [project, projectTitleObject, projectTextObject, projectTitles, projectText]);
+
+    /* --- ANIMATE SET PROJECT --- */ 
 
     useEffect(() => {
         setFade('0');
@@ -17,24 +42,20 @@ const ProjectWindow = ( props ) => {
         }, 500);
     }, [project]);
 
-    /*--------- CYCLE IMAGES FROM JSON PATHS ---------*/
-
-    const testImage = props.testImage;
-    const imageIteration = useRef(0);
-    const [image, setImage] = useState(testImage[0]);
+    /* --- SET AND CYCLE IMAGES FROM JSON PATHS --- */
 
     useEffect(() => {
         const imageInterval = setInterval(() => {
-            if (imageIteration.current === testImage.length - 1) {
+            if (imageIteration.current === projectImages[project].length - 1) {
                 imageIteration.current = 0;
-                setImage(testImage[imageIteration.current]); 
-            }   else if (imageIteration.current < testImage.length - 1) {
+                setImage(projectImages[project][imageIteration.current]); 
+            }   else if (imageIteration.current < projectImages[project].length - 1) {
                 imageIteration.current++;
-                setImage(testImage[imageIteration.current]);
+                setImage(projectImages[project][imageIteration.current]);
             }
         }, 1500);
         return () => clearInterval(imageInterval)
-    }, [testImage, image, imageIteration]);
+    }, [project, projectImages, image, imageIteration]);
 
     return ( 
         <div className="project-window" style={{opacity: fade, transform: translation}}>
@@ -46,7 +67,7 @@ const ProjectWindow = ( props ) => {
                 <img className='project-images' alt={`${projectTitleContent} images`} src={`./images/${image}`}></img>
             </div>
         </div>
-     );
+    );
 }
  
 export default ProjectWindow;

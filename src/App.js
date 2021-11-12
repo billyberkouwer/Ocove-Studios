@@ -25,8 +25,6 @@ function App() {
      };
   })();
 
-  const testImage = projectImages[0];
-
   return (
     <Router>
       <div className="wrapper">
@@ -44,7 +42,7 @@ function App() {
                     <ProjectSection 
                       projectTitles={projectTitles} 
                       projectText={projectText} 
-                      testImage={testImage}
+                      projectImages={projectImages}
                     />
                   </Route>
                   <Route path="/services">
