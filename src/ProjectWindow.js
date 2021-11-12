@@ -27,8 +27,12 @@ const ProjectWindow = ( props ) => {
                     projectTextObject.current = projectText[i];
                 };
             };
+            if (imageIteration.current !== 0) {
+                imageIteration.current = 0;
+                setImage(projectImages[project][imageIteration.current]);
+            };
         }, 495);
-    }, [project, projectTitleObject, projectTextObject, projectTitles, projectText]);
+    }, [project, projectImages, projectTitleObject, projectTextObject, projectTitles, projectText]);
 
     /* --- ANIMATE SET PROJECT --- */ 
 
@@ -41,30 +45,16 @@ const ProjectWindow = ( props ) => {
         }, 500);
     }, [project]);
 
-    /* --- SET AND CYCLE IMAGES FROM JSON PATHS --- */
-
-    // Initial project set change (Accounting for animation)
-
-    useEffect(() => {
-        setTimeout(function(){
-            setImage(projectImages[project][imageIteration.current]); 
-        }, 495);
-    }, [project, projectImages, image, imageIteration])
-
-    // Setting images and image cycle
+    /* --- CYCLE IMAGES FROM JSON --- */
 
     useEffect(() => {
         const imageInterval = setInterval(() => {
             if (imageIteration.current >= projectImages[project].length - 1) {
                 imageIteration.current = 0;
-                setTimeout(function(){
-                    setImage(projectImages[project][imageIteration.current]); 
-                }, 495);
+                setImage(projectImages[project][imageIteration.current]);      
             }   else if (imageIteration.current < projectImages[project].length - 1) {
                 imageIteration.current++;
-                setTimeout(function(){
-                    setImage(projectImages[project][imageIteration.current]); 
-                }, 495);
+                setImage(projectImages[project][imageIteration.current]);
                 console.log(image);
             }
         }, 1500);
