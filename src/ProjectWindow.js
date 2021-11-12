@@ -27,7 +27,6 @@ const ProjectWindow = ( props ) => {
                     projectTextObject.current = projectText[i];
                 };
             };
-            
         }, 495);
     }, [project, projectTitleObject, projectTextObject, projectTitles, projectText]);
 
