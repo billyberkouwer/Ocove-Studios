@@ -1,12 +1,15 @@
 import { useEffect, useState, useRef } from "react";
-import gsap from "gsap";
 
 const ProjectWindow = ( props ) => {
 
+    // Props
+ 
     const projectTitles = props.projectTitles;
     const projectText = props.projectText;
     const project = props.project;
     const projectImages = props.projectImages;
+
+    // Window
 
     const [windowFade, setWindowFade] = useState('0');
     const [translation, setTranslation] = useState('translateX(5%)');
@@ -14,6 +17,8 @@ const ProjectWindow = ( props ) => {
     const projectTextObject = useRef(projectText[0]);
     const projectTitleContent = Object.values(projectTitleObject);
     const projectTextContent = Object.values(projectTextObject);
+
+    // Images
 
     const imageIteration = useRef(0);
     const [image, setImage] = useState(projectImages[0][0]);
