@@ -12,25 +12,18 @@ function App() {
     
   /* --- COMPOSE PROJECTS DATA FROM JSON --- */
 
-  const projectObjects = [];
   const projectTitles = [];
   const projectText = [];
   const projectImages = [];
-
-  for (var i in Projects) {
-      projectObjects.push(Projects[i]);
-  };
-
-  function produceProjectArrays() {
-      for (let i = 0; i < projectObjects.length; i++) {
-          const element = projectObjects[i];
-          projectTitles.push(element.title);
-          projectText.push(element.text);
-          projectImages.push(element.images);
-      }
-  };
-
-  produceProjectArrays();
+  
+  (function () {
+    for (var i in Projects) {
+        const p = Projects[i];
+        projectTitles.push(p.title);
+        projectText.push(p.text);
+        projectImages.push(p.images);
+     };
+  })();
 
   return (
     <Router>
@@ -46,7 +39,11 @@ function App() {
                     <LandingPage />
                   </Route>
                   <Route path="/projects">
-                    <ProjectSection projectTitles={projectTitles} projectText={projectText} />
+                    <ProjectSection 
+                      projectTitles={projectTitles} 
+                      projectText={projectText} 
+                      projectImages={projectImages}
+                    />
                   </Route>
                   <Route path="/services">
                     <ServiceSection />
