@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
 
 const ProjectWindow = ( props ) => {
 
@@ -7,7 +8,7 @@ const ProjectWindow = ( props ) => {
     const project = props.project;
     const projectImages = props.projectImages;
 
-    const [fade, setFade] = useState('0');
+    const [windowFade, setWindowFade] = useState('0');
     const [translation, setTranslation] = useState('translateX(5%)');
     const projectTitleObject = useRef(projectTitles[0]);
     const projectTextObject = useRef(projectText[0]);
@@ -16,6 +17,7 @@ const ProjectWindow = ( props ) => {
 
     const imageIteration = useRef(0);
     const [image, setImage] = useState(projectImages[0][0]);
+    const [imageFade, setImageFade] = useState('0')
 
     /* --- DYNAMICALLY SET PROJECT CONTENT FROM JSON --- */
 
@@ -28,18 +30,17 @@ const ProjectWindow = ( props ) => {
                 };
             };
             imageIteration.current = 0;
-            console.log(project)
             setImage(projectImages[project][imageIteration.current]);
         }, 495);
     }, [project, projectImages, projectTitleObject, projectTextObject, projectTitles, projectText]);
 
-    /* --- ANIMATE SET PROJECT --- */ 
+    /* --- ANIMATE SELECT PROJECT --- */ 
 
     useEffect(() => {
-        setFade('0');
+        setWindowFade('0');
         setTranslation('translateX(5%)');
         setTimeout(function(){
-            setFade('1'); 
+            setWindowFade('1'); 
             setTranslation('translateX(0%)');
         }, 500);
     }, [project]);
@@ -50,24 +51,31 @@ const ProjectWindow = ( props ) => {
         const imageInterval = setInterval(() => {
             if (imageIteration.current >= projectImages[project].length - 1) {
                 imageIteration.current = 0;
-                setImage(projectImages[project][imageIteration.current]);      
+                setImageFade('0');
+                setTimeout(function(){
+                    setImage(projectImages[project][imageIteration.current]);
+                    setImageFade('1');
+                }, 300);      
             }   else if (imageIteration.current < projectImages[project].length - 1) {
                 imageIteration.current++;
-                setImage(projectImages[project][imageIteration.current]);
+                setImageFade('0');
+                setTimeout(function(){
+                    setImage(projectImages[project][imageIteration.current]);
+                    setImageFade('1');
+                }, 300);   
             }
-        }, 1500);
+        }, 5000);
         return () => {clearInterval(imageInterval)}
     }, [project, projectImages]);
 
-
     return ( 
-        <div className="project-window" style={{opacity: fade, transform: translation}}>
+        <div className="project-window" style={{opacity: windowFade, transform: translation}}>
             <div className="project-text">
                 <h3>{projectTitleContent}</h3>
                 <p>{projectTextContent}</p>
             </div>
             <div className="project-images-container horizontal-center vertical-center">
-                <img className='project-images' alt={`${projectTitleContent} images`} src={`./images/${image}`}></img>
+                <img className='project-images' style={{opacity: imageFade}} alt={`${projectTitleContent} images`} src={`./images/${image}`}></img>
             </div>
         </div>
     );
