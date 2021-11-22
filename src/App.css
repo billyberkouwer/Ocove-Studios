@@ -176,6 +176,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateY(5%)
 }
 
 .brand-name-line-1 {
@@ -234,8 +235,8 @@ video {
 }
 
 .particle-container {
-  height: 70vh;
-  width: 70%
+  height: 60vh;
+  width: 80%
 }
 
 #tsparticles {
@@ -246,7 +247,7 @@ video {
 
 .view-projects-button {
   width: 40%;
-  height: 75px;
+  height: 55px;
   background-color: white;
   border: solid 1.5px black;
   font-family: NeutralFace;
@@ -264,6 +265,7 @@ video {
 .three-logo-model {  
   z-index: 0;   
   transform: translateX(20%);
+  opacity: .4
 }
 
 .three-logo-overlay {

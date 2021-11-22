@@ -7,7 +7,7 @@ import Logo from "./assets/3d/3d-logo-1.glb"
 const Model = (props) => {
     const group = useRef()
     const { nodes, materials } = useGLTF(Logo)
-    useFrame(() => (group.current.rotation.y += 0.001));
+    useFrame(() => (group.current.rotation.y += 0.0007));
     return (
         <group scale={[1.5,1.5,1.5]} ref={group} {...props} dispose={null}>
             <mesh

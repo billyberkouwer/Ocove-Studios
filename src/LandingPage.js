@@ -19,6 +19,8 @@ const LandingPage = () => {
     const brandName1 = useRef();
     const brandName2 = useRef();
 
+    const bgLogo = useRef();
+
     const infoLine1 = useRef();
     const infoLine2 = useRef();
     const infoLine3 = useRef();
@@ -26,6 +28,9 @@ const LandingPage = () => {
     const infoLine5 = useRef();
 
     const infoBlock = useRef();
+    const particles = useRef();
+
+    const projectsButton = useRef();
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +66,15 @@ const LandingPage = () => {
             delay: .2
         })
 
+        gsap.from(bgLogo.current, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".home-2",
+                scrub: true,
+                start: "top 50%"
+            }
+        })
+
         gsap.from(infoLines, {
             y: 50,
             skewX: 20,
@@ -76,14 +90,38 @@ const LandingPage = () => {
             }
         })
 
-        gsap.from(infoBlock.current, {
-            x: -50,
+        gsap.from(particles.current, {
             opacity: 0,
-            stagger: 1,
+            scrollTrigger: {
+                trigger: ".home-3-left",
+                scrub: true,
+                start: "top 50%",
+                end: "top top",
+            }
+        })
+
+        gsap.from(infoBlock.current, {
+            x: -10,
+            opacity: 0,
             duration: .5,
             scrollTrigger: {
                 trigger: ".home-3-right",
-                start: "top 20%"
+                start: "top 50%",
+                end: "top top",
+                scrub: true
+            }
+        })
+
+        gsap.from(projectsButton.current, {
+            x: 10,
+            opacity: 0,
+            duration: .5,
+            scrollTrigger: {
+                trigger: ".view-projects-button",
+                start: "bottom bottom",
+                end: "top 75%",
+                scrub: true,
+                markers: true
             }
         })
 
@@ -100,7 +138,7 @@ const LandingPage = () => {
             </section>
 
             <section className="home-2 wrapper">
-                <div className="three-logo three-logo-model">
+                <div className="three-logo three-logo-model" ref={bgLogo}>
                     <ThreeLogo />
                     <div className="three-logo three-logo-overlay"></div>
                 </div>
@@ -121,7 +159,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="home-3-right">
-                    <div className="particle-container">
+                    <div className="particle-container" ref={particles}>
                         <Particles
                             id="tsparticles"
                             options={{
@@ -181,7 +219,7 @@ const LandingPage = () => {
                                         enable: true,
                                         outMode: "bounce",
                                         random: false,
-                                        speed: 3,
+                                        speed: 1.5,
                                         straight: false,
                                     },
                                     number: {
@@ -206,7 +244,7 @@ const LandingPage = () => {
                             }
                             } />
                     </div>
-                    <button className="view-projects-button"> SEE OUR WORK </button>
+                    <button className="view-projects-button" ref={projectsButton}> SEE OUR WORK </button>
                 </div>
             </section>
         </div>
