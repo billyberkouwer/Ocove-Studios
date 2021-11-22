@@ -42,8 +42,9 @@ const LandingPage = () => {
         gsap.to(bgVideo.current, {
             opacity: 0,
             scrollTrigger: {
-                trigger: ".home-2",
-                scrub: true
+                trigger: ".bg-video",
+                scrub: true,
+                pin: ".bg-video"
             }
         })
 
@@ -91,7 +92,7 @@ const LandingPage = () => {
     return (
         <div className="home">
             <section className="home-1 wrapper">
-                <video src={video} autoPlay loop playsinline muted ref={bgVideo}></video>
+                <video src={video} autoPlay loop playsinline muted ref={bgVideo} class="bg-video"></video>
                 <div className="brand-name wrapper">
                     <div className="brand-name-line-1 no-select" ref={brandName1}>OCOVE</div>
                     <div className="brand-name-line-2 no-select" ref={brandName2}>STUDIOS</div>
