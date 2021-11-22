@@ -16,7 +16,7 @@ const ProjectWindow = ( props ) => {
 
     const imageIteration = useRef(0);
     const [image, setImage] = useState(projectImages[0][0]);
-    const [imageFade, setImageFade] = useState('0')
+    const [imageFade, setImageFade] = useState('0');
 
     /* --- DYNAMICALLY SET PROJECT CONTENT FROM JSON --- */
 
@@ -39,8 +39,8 @@ const ProjectWindow = ( props ) => {
         setWindowFade('0');
         setTranslation('translateX(5%)');
         setTimeout(function(){
-            setImageFade('1')
-            setWindowFade('1'); 
+            setImageFade('1');
+            setWindowFade('1');
             setTranslation('translateX(0%)');
         }, 500);
     }, [project]);
@@ -62,7 +62,7 @@ const ProjectWindow = ( props ) => {
                 setTimeout(function(){
                     setImage(projectImages[project][imageIteration.current]);
                     setImageFade('1');
-                }, 300);   
+                }, 300);
             }
         }, 5000);
         return () => {clearInterval(imageInterval)}
