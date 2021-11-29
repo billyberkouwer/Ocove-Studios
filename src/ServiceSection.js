@@ -4,6 +4,7 @@
 // import NewCameraIcon from "./NewCameraIcon.js";
 import React, { Suspense, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+// import { DrawSVGPlugin } from "gsap";
 
 
 const NewWebIcon = React.lazy(() => import('./NewWebIcon'));
@@ -89,6 +90,11 @@ const ServiceSection = () => {
             <section className="services-1 wrapper">
                 <div className="header-container no-select">
                     <h2>What can we do for you?</h2>
+                    <div className="header-arrow-wrapper">
+                        <svg width="120" height="16" viewBox="0 0 160 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M159.528 8.69148C159.919 8.30096 159.919 7.66779 159.528 7.27727L153.164 0.913307C152.774 0.522783 152.14 0.522783 151.75 0.913307C151.359 1.30383 151.359 1.937 151.75 2.32752L157.407 7.98438L151.75 13.6412C151.359 14.0318 151.359 14.6649 151.75 15.0554C152.14 15.446 152.774 15.446 153.164 15.0554L159.528 8.69148ZM0.410889 8.98438H158.821V6.98438H0.410889V8.98438Z" fill="black" />
+                        </svg>
+                    </div>
                 </div>
                 <div className="services-container">
                     <div className="service-icon-container">
@@ -98,7 +104,7 @@ const ServiceSection = () => {
                             </Suspense>
                         </div>
                         <div className="service-name">
-                            <h4>web development</h4>
+                            <h4>Web Development</h4>
                         </div>
                     </div>
                     <div className="service-icon-container">
@@ -109,7 +115,7 @@ const ServiceSection = () => {
 
                         </div>
                         <div className="service-name">
-                            <h4>3d visuals</h4>
+                            <h4>3d Visuals</h4>
                         </div>
                     </div>
                     <div className="service-icon-container">
@@ -120,7 +126,7 @@ const ServiceSection = () => {
 
                         </div>
                         <div className="service-name">
-                            <h4>branding</h4>
+                            <h4>Branding</h4>
                         </div>
                     </div>
                     <div className="service-icon-container">
@@ -131,7 +137,7 @@ const ServiceSection = () => {
 
                         </div>
                         <div className="service-name">
-                            <h4>video production</h4>
+                            <h4>Video Production</h4>
                         </div>
                     </div>
                 </div>
@@ -145,11 +151,13 @@ const ServiceSection = () => {
                     </div>
                     <div className="form" ref={formRef}>
                         <form name="contact" method="POST" data-netlify="true">
-                            <input ref={input1} type="text" name="name" placeholder="Name" />
-                            <div className="horizontal-line" ref={formLine1}></div>
-                            <input ref={input2} type="email" name="email" placeholder="Email" />
-                            <div className="horizontal-line" ref={formLine2}></div>
-                            <textarea ref={input3} name="message" placeholder="Message"></textarea>
+                            <div className="form-1">
+                                <input ref={input1} type="text" name="name" placeholder="NAME" />
+                                <input ref={input2} type="email" name="email" placeholder="EMAIL" />
+                                <div className="horizontal-line" ref={formLine1}></div>
+                                <div className="horizontal-line" ref={formLine2}></div>
+                            </div>
+                            <textarea ref={input3} name="message" placeholder="MESSAGE"></textarea>
                             <div className="horizontal-line" ref={formLine3}></div>
                         </form>
                     </div>
@@ -163,17 +171,33 @@ const ServiceSection = () => {
             <section className="services-3">
                 <div className="header-container no-select">
                     <h2>Or contact us directly</h2>
+                    <div className="header-arrow-wrapper">
+                        <svg width="120" height="16" viewBox="0 0 160 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M159.528 8.69148C159.919 8.30096 159.919 7.66779 159.528 7.27727L153.164 0.913307C152.774 0.522783 152.14 0.522783 151.75 0.913307C151.359 1.30383 151.359 1.937 151.75 2.32752L157.407 7.98438L151.75 13.6412C151.359 14.0318 151.359 14.6649 151.75 15.0554C152.14 15.446 152.774 15.446 153.164 15.0554L159.528 8.69148ZM0.410889 8.98438H158.821V6.98438H0.410889V8.98438Z" fill="black" />
+                        </svg>
+                    </div>
                 </div>
+
                 <div className="contact-info-container">
+                    <div className="contact-info-photo">
+
+                    </div>
+                    <div className="contact-info">
+                        <p>Billy Myles-Berkouwer</p>
+                        <p>billy@email.com</p>
+                        <a href="https://billyberkouwer.com" rel="noreferrer">Website</a>
+                        <p>Linkedin</p>
+                    </div>
+                    <div className="contact-info-photo">
+                    </div>
+                    <div className="contact-info">
+                        <p>Matt Congdon</p>
+                        <p>matt@email.com</p>
+                        <a href="https://mattcongdon.info" target="_blank" rel="noreferrer">Website</a>
+                        <p>Linkedin</p>
+                    </div>
                 </div>
-                <div className="contact-info-photo">
-                </div>
-                <div className="contact-info">
-                </div>
-                <div className="contact-info-photo">
-                </div>
-                <div className="contact-info">
-                </div>
+
             </section>
 
         </div>

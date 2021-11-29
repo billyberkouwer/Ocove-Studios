@@ -1,7 +1,8 @@
 /* FONTS */
+
 @font-face {
-  font-family: NeutralFace;
-  src: url(./assets/fonts/NeutralFace.otf);
+  font-family: DxSitrus;
+  src: url(./assets/fonts/DxSitrus-Expanded.otf);
 }
 
 @font-face {
@@ -9,13 +10,14 @@
     src: url(./assets/fonts/PPHatton-Medium.otf);}
 
 @font-face {
-  font-family: PPEiko-Medium;
-  src: url(./assets/fonts/PPEiko-Medium.otf);
+  font-family: PPEiko-Thin;
+    src: url(./assets/fonts/PPEiko-Thin.otf);
 }
 
 @font-face {
-  font-family: PPEiko-Thin;
-    src: url(./assets/fonts/PPEiko-Thin.otf);}
+  font-family: NeueHaasRoman;
+  src: url(./assets/fonts/NeueHaasDisplayRoman.ttf);
+}
 
 /* BASE STYLES */
 
@@ -78,10 +80,10 @@ h2, h3 {
   font-family: PPEiko-Thin;
 }
 
-h4, label, input, textarea, button {
-  font-family: NeutralFace;
-  letter-spacing: calc(0.3px + 0.07vw);
-  font-weight: 100;
+h3, h4, label, input, textarea, button, li, a {
+  font-family: NeueHaasRoman;
+  font-weight: 500;
+  letter-spacing: .6px;
 }
 
 /* NAVBAR */
@@ -109,14 +111,12 @@ h4, label, input, textarea, button {
 }
 
 .nav-links li a {
-  font-family: NeutralFace;
-  font-size: calc(8px + 0.8vw);
-  letter-spacing: calc(0.3px + 0.07vw);
+  font-size: calc(12px + 0.8vw);
   text-decoration: none;
   color: black;
   transition: opacity .2s;
   padding: 10px 20px;
-  letter-spacing: 1.5px;
+  letter-spacing: .8px;
 }
 
 .nav-links li a:hover {
@@ -176,22 +176,23 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translateY(5%)
+  width: 100%;
+  height: 100%;
+  transform: translateY(2%) translateX(15px);
+  opacity: .9
 }
 
 .brand-name-line-1 {
-  letter-spacing: calc(1px + 0.1vw);
-  transform: translateY(18%);
+  font-size: calc(80px + 13vw);
+  letter-spacing: .2px;
+  /* transform: translateY(20%) translateX(7px); */
+  font-family: DxSitrus
 }
 
 .brand-name-line-2 {
-  letter-spacing: calc(-0.15px + -1.3vw);
-  transform: translateY(-18%);
-}
-
-.brand-name-line-1, .brand-name-line-2 {
+  letter-spacing: calc(-0.15px + -1vw);
+  /* transform: translateY(-25%); */
   font-family: PPHatton-Medium;
-  text-transform: uppercase;
   font-size: calc(60px + 13vw);
 }
 
@@ -202,15 +203,20 @@ video {
   height: 100vh;
 }
 
+.paragraph-arrow {
+  width: 80px;
+  display: inline-block;
+}
+
 .info-container-1 p {
-  font-family: PPEiko-Medium;
-  font-size: calc(18px + 2.8vw);
+  font-family: NeueHaasRoman;
+  font-size: calc(20px + 1.7vw);
   z-index: 1;
   width: 80%;
   margin: 0 auto;
-  line-height: calc(28px + 4.5vw);
+  line-height: calc(20px + 3vw);
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: justify; 
 }
 
 .home-3 {
@@ -227,11 +233,17 @@ video {
 
 }
 
+.info-container-2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .info-container-2 p {
-  font-family: PPEiko-Thin;
-  font-size: calc(10px + 2vw);
+  font-family: NeueHaasRoman;
+  font-size: calc(10px + 1.7vw);
   width: 70%;
-  line-height: calc(30px + 2.7vw);
+  line-height: calc(25px + 2vw);
+  margin: 30px 0 25px 65px;
 }
 
 .particle-container {
@@ -250,9 +262,8 @@ video {
   height: 55px;
   background-color: white;
   border: solid 1.5px black;
-  font-family: NeutralFace;
-  font-size: calc(8px + 0.8vw);
-  letter-spacing: 2px;
+  font-size: calc(10px + 0.8vw);
+  letter-spacing: .8px;
 } 
 
 .three-logo {
@@ -265,7 +276,7 @@ video {
 .three-logo-model {  
   z-index: 0;   
   transform: translateX(20%);
-  opacity: .4
+  opacity: 0
 }
 
 .three-logo-overlay {
@@ -306,13 +317,11 @@ video {
   height: 90vh;
   width: 100%;
   position: relative;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 .project-menu {
   box-sizing: border-box;
-  font-family: NeutralFace;
-  letter-spacing: 1.5px;
   display: flex;
   align-items: center;
   width: 25vw;
@@ -320,6 +329,7 @@ video {
   height: 80%;
   margin: 0 0 0 4vw;
   font-size: calc(9px + 0.8vw);
+  text-transform: uppercase;
 }
 
 .project-menu ul {
@@ -399,7 +409,16 @@ video {
 }
 
 .services, .header-container {
-  padding: 1vw 4vw 4vw 4vw;
+  padding: 1vw 4vw 2vw 4vw;
+}
+
+.header-container {
+  display: flex;
+}
+
+.header-arrow-wrapper {
+  padding: 30px 0 0 50px;
+  display: inline-block
 }
 
 .services h2 {
@@ -409,6 +428,7 @@ video {
 
 .services h4 {
 font-size: calc(6px + 0.8vw);
+text-transform: uppercase;
 }
 
 .service-icon-container {
@@ -463,10 +483,18 @@ font-size: calc(6px + 0.8vw);
   padding: 1vw 4vw;
   font-size: calc(9px + 0.8vw);
   background-color: white;
+  text-transform: uppercase;
 }
 
 .form {
   width: 70%;
+}
+
+.form-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  column-gap: 30px;
 }
 
 .form input, textarea {
@@ -485,6 +513,20 @@ input::placeholder, textarea::placeholder {
 
 .services-3 {
   height: 70vh
+}
+
+.contact-info-container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: 25% 25% 25% 25%;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.contact-info-photo {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
 }
 
 /* --- FADE --- */ 
