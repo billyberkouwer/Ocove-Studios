@@ -30,7 +30,7 @@ function App() {
       <div className="wrapper">
         <Navbar />
         <div className="global-container">
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <Route render={({location}) => (
             <TransitionGroup>
               <CSSTransition key={location.key} timeout={300} classNames="fade">

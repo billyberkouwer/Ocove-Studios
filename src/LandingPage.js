@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ThreeLogo from './3dLogo.js';
 import video from './assets/single_loop_video_bg.mp4';
 import Particles from 'react-tsparticles';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
 
@@ -254,7 +255,7 @@ const LandingPage = () => {
                             }
                             } />
                     </div>
-                    <button className="view-projects-button" ref={projectsButton}> SEE OUR WORK </button>
+                    <Link className="button-wrapper" to="/projects"><button className="view-projects-button" ref={projectsButton}> SEE OUR WORK </button></Link>
                 </div>
             </section>
         </div>

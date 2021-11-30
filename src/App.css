@@ -257,13 +257,22 @@ video {
   margin: 2vw 1vw
 }
 
-.view-projects-button {
+.button-wrapper {
   width: 40%;
   height: 55px;
-  background-color: white;
   border: solid 1.5px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.view-projects-button {
+  border: none;
+  background-color: white;
   font-size: calc(10px + 0.8vw);
   letter-spacing: .8px;
+  cursor: pointer
 } 
 
 .three-logo {
