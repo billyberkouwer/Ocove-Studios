@@ -2,26 +2,46 @@
     "AutonomicsResearchCentre": {
         "title": "Autonomics Research Centre",
         "text": "The Autonomics Research Centre is an art and academic research collective. We provided UI/UX design, website development and creative direction for their online presence and published output.",
-        "images": ["autonomics/autonomics.jpg", "autonomics/autonomics2.jpg", "autonomics/autonomics3.jpg"]
+        "images": ["autonomics/autonomics.jpg", "autonomics/autonomics2.jpg", "autonomics/autonomics3.jpg"],
+        "links": {
+            "url": "https://www.autonomia.ac",
+            "text": "Visit Autonics Research Centre Website"
+        }
     },
     "ChappelGalleries": {
         "title": "Chappel Galleries",
         "text": "Chappel Galleries is a long-standing commercial gallery of modern and contemporary art. Throughout 2020 and 2021, we produced a series of five videos for their exhibitions. We recorded, edited, and colour graded the videos with our in-house team. Each video contained an original score, interviews with the artists, and documentation of the gallery and the work on display.",
-        "images": ""
+        "images": ["cgalleries/gardens.jpg","cgalleries/ronaldson.jpg", "cgalleries/shanti-panchal.jpg"],
+        "links": {
+            "url": "https://www.chappelgalleries.co.uk",
+            "text": "Watch videos on Chappel Galleries' website"
+        }
     },
     "JohnHounam": {
         "title": "John Hounam Fine Art",
         "text": "John Hounam is a visual artist based in Oxford, UK. We developed his website, which displays a varied portfolio of watercolours, paintings, drawings and video work.",
-        "images": ["jhounam/haldrine-cove_orig.jpg", "jhounam/pont-de-bir-hakeim.jpg", "jhounam/reclining-figure-on-draped-chaise-longue_orig.jpg", "jhounam/work-in-progress.jpg"]
+        "images": ["jhounam/haldrine-cove_orig.jpg", "jhounam/pont-de-bir-hakeim.jpg", "jhounam/reclining-figure-on-draped-chaise-longue_orig.jpg", "jhounam/work-in-progress.jpg"],
+        "links": {
+            "url": "https://www.johnhounam.com",
+            "text": "Visit Joun Hounam's website"
+        }
     },
     "HelenHoward": {
         "title": "Helen Howard Ceramics",
         "text": "Helen Howard is a ceramic and drawing artist whose work is inspired by observations of the natural world. We developed Helen’s website, which displays collections of Raku-fired pots, drawings and information about her work.",
-        "images": ""
+        "images": ["/hhoward/catching-waves-ii-a-29-x-29-x-12d_orig.jpg", "/hhoward/corrie-series-v-c-c_orig.jpg", "/hhoward/through-branches-i-charcoal-and-graphite-drawing-122-x-95-cm_orig.jpg"],
+        "links": {
+            "url": "https://www.helenhowardceramics.co.uk",
+            "text": "Visit Helen Howard's website"
+        }
     },
     "IsabelKnowland": {
         "title": "Isabel Knowland Fine Art",
         "text": "Isabel Knowland is a multidisciplinary artist working in sculpture, painting, installation, and printmaking. We designed and developed her website to organise her collections of work and grow her online presence.",
-        "images": ""
+        "images": ["iknowland/_DSC0183.jpg","iknowland/IMG_0576.jpg","iknowland/IMG_6118.jpg"],
+        "links": {
+            "url": "https://www.isabelknowland.com",
+            "text": "Visit Isabel Knowland's website"
+        }
     }
 }

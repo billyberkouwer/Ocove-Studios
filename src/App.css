@@ -324,9 +324,8 @@ video {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  width: 25vw;
-  /* max-width: 00px; */
-  height: 80%;
+  width: 25%;
+  height: 100%;
   margin: 0 0 0 4vw;
   font-size: calc(9px + 0.8vw);
   text-transform: uppercase;
@@ -352,11 +351,15 @@ video {
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 4vw;
+  padding: 2%;
+  margin: 2%;
+  justify-content: center;
   height: 90%;
-  width: 75vw;
+  min-width: 75%;
+  max-width: 75%;
   box-sizing: border-box;
   transition: ease .5s;
+  border: 2px solid black;
 }
 
 .project-text {
@@ -370,7 +373,11 @@ video {
 }
 
 .project-images-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
   width: 50%;
+  height: 100%;
   background-color: none;
   object-fit: cover;
   overflow: hidden;
@@ -379,10 +386,10 @@ video {
 .project-images {
   text-align: center;
   background-color: rgb(186, 196, 206);
-  width: 100%;
+  width: auto;
+  height: inherit;
   opacity: 1;
-  transition: ease .3s;
-  height: auto;
+  transition: ease .5s;
 }
 
 
