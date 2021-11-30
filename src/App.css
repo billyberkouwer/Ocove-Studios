@@ -715,9 +715,6 @@ video {
     justify-content: center;
     align-items: center;
   }
-  .project-menu ul>* {
-    flex: 3 3 30%;
-  }
 
   .project-menu li {
     width: auto;
@@ -726,6 +723,11 @@ video {
     max-width: 50%;
     margin: .5em .5em;
   }
+
+  .project-menu ul>* {
+    flex: 1 1 30%;
+  }
+
 
   .project-window {
     display: block;
