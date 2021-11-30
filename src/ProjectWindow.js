@@ -6,13 +6,21 @@ const ProjectWindow = ( props ) => {
     const projectText = props.projectText;
     const project = props.project;
     const projectImages = props.projectImages;
+    const projectLinkURLS = props.projectLinkURLS;
+    const projectLinks= props.projectLinks;
 
     const [windowFade, setWindowFade] = useState('0');
     const [translation, setTranslation] = useState('translateX(5%)');
+
     const projectTitleObject = useRef(projectTitles[0]);
     const projectTextObject = useRef(projectText[0]);
+    const projectLinkURLSObject = useRef(projectLinkURLS[0])
+    const projectLinksObject = useRef(projectLinks[0])
+
     const projectTitleContent = Object.values(projectTitleObject);
     const projectTextContent = Object.values(projectTextObject);
+    const projectLinkURLContent = Object.values(projectLinkURLSObject);
+    const projectLinkContent = Object.values(projectLinksObject);
 
     const imageIteration = useRef(0);
     const [image, setImage] = useState(projectImages[0][0]);
@@ -26,12 +34,16 @@ const ProjectWindow = ( props ) => {
                 if (project === i) {
                     projectTitleObject.current = projectTitles[i];
                     projectTextObject.current = projectText[i];
+                    projectLinkURLSObject.current = projectLinkURLS[i];
+                    projectLinksObject.current = projectLinks[i];
                 };
             };
             imageIteration.current = 0;
             setImage(projectImages[project][imageIteration.current]);
         }, 495);
-    }, [project, projectImages, projectTitleObject, projectTextObject, projectTitles, projectText]);
+    },[projectTitleObject, projectTextObject, projectTitles, projectText, projectImages, project, projectLinkURLS, projectLinks]);
+
+    console.log('refresh')
 
     /* --- ANIMATE SELECT PROJECT --- */ 
 
@@ -55,14 +67,14 @@ const ProjectWindow = ( props ) => {
                 setTimeout(function(){
                     setImage(projectImages[project][imageIteration.current]);
                     setImageFade('1');
-                }, 300);      
+                }, 500);      
             }   else if (imageIteration.current < projectImages[project].length - 1) {
                 imageIteration.current++;
                 setImageFade('0');
                 setTimeout(function(){
                     setImage(projectImages[project][imageIteration.current]);
                     setImageFade('1');
-                }, 300);
+                }, 500);
             }
         }, 5000);
         return () => {clearInterval(imageInterval)}
@@ -73,6 +85,7 @@ const ProjectWindow = ( props ) => {
             <div className="project-text">
                 <h3>{projectTitleContent}</h3>
                 <p>{projectTextContent}</p>
+                <a href={projectLinkURLContent}>{projectLinkContent}</a>
             </div>
             <div className="project-images-container horizontal-center vertical-center">
                 <img className='project-images' style={{opacity: imageFade}} alt={`${projectTitleContent} images`} src={`./images/${image}`}></img>

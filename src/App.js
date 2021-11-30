@@ -15,6 +15,8 @@ function App() {
   const projectTitles = [];
   const projectText = [];
   const projectImages = [];
+  const projectLinkURLS = [];
+  const projectLinks = [];
   
   (function () {
     for (var i in Projects) {
@@ -22,8 +24,11 @@ function App() {
         projectTitles.push(p.title);
         projectText.push(p.text);
         projectImages.push(p.images);
+        projectLinkURLS.push(p.links.url);
+        projectLinks.push(p.links.text);
      };
   })();
+
 
   return (
     <Router>
@@ -43,6 +48,8 @@ function App() {
                       projectTitles={projectTitles} 
                       projectText={projectText} 
                       projectImages={projectImages}
+                      projectLinkURLS={projectLinkURLS}
+                      projectLinks={projectLinks}
                     />
                   </Route>
                   <Route path="/services">
