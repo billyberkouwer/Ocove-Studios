@@ -594,10 +594,43 @@ input::placeholder, textarea::placeholder {
     font-size: calc(20px + 1.7vw);
     z-index: 1;
     width: 80%;
-    margin: 0 auto;
+    margin: 30% auto;
     line-height: calc(25px + 2vw);
     letter-spacing: 1px;
   }
 
+  .home-2 canvas {
+    height: 396px;
+  }
+
+  .home-3 {
+    flex-direction: column
+  }
+
+  .home-3-left, .home-3-right {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-container-2 {
+    height: 30vh
+  }
+
+  .info-container-2 p {
+  font-size: calc(10px + 1.7vw);
+  width: 80%;
+  line-height: calc(25px + 2vw);
+  margin: 0
+  }
+
+  #tsparticles {
+    width: 90%;
+    height: 80%;
+    margin: 0;
+  }
 
 }

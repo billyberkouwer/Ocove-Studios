@@ -13,6 +13,8 @@ const LandingPage = () => {
     const e = useRef();
     const q = gsap.utils.selector(e);
 
+    //DESKTOP REFS
+
     const bgVideo = useRef();
 
     const brandName1 = useRef();
@@ -31,101 +33,157 @@ const LandingPage = () => {
 
     const projectsButton = useRef();
 
+    //MOBILE REFS
+
+    const infoMobile = useRef();
+
+
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
 
-        const infoLines = [
-            infoLine1.current,
-            infoLine2.current,
-            infoLine3.current,
-            infoLine4.current,
-            infoLine5.current,
-        ]
+        ScrollTrigger.matchMedia({
 
-        gsap.to(bgVideo.current, {
-            opacity: 0,
-            scrollTrigger: {
-                trigger: ".bg-video",
-                scrub: true,
-                pin: ".bg-video"
+            "(min-width: 860px)": function () {
+
+                const infoLines = [
+                    infoLine1.current,
+                    infoLine2.current,
+                    infoLine3.current,
+                    infoLine4.current,
+                    infoLine5.current,
+                ]
+
+                gsap.to(bgVideo.current, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: ".bg-video",
+                        scrub: true,
+                        pin: ".bg-video"
+                    }
+                })
+
+                gsap.from(brandName1.current, {
+                    // y: 90,
+                    opacity: 0,
+                    duration: .5,
+                    delay: .4
+                })
+                gsap.from(brandName2.current, {
+                    // y: -90,
+                    opacity: 0,
+                    duration: .5,
+                    delay: .8
+                })
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".home-2",
+                        scrub: true,
+                        start: "top 30%",
+                        end: "bottom -50%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                })
+                tl
+                    .to(bgLogo.current, { opacity: .6, duration: 0.5 })
+                    .to(bgLogo.current, { opacity: 0, duration: 0.5 }, 0.5);
+
+                gsap.from(infoLines, {
+                    y: 50,
+                    skewX: 20,
+                    skewY: 1,
+                    opacity: 0,
+                    stagger: 1,
+                    duration: 1,
+                    delay: .2,
+                    scrollTrigger: {
+                        trigger: ".home-2",
+                        scrub: true,
+                        pin: true,
+                    }
+                })
+
+                gsap.from(particles.current, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: ".home-3-left",
+                        scrub: true,
+                        start: "top 50%",
+                        end: "top top",
+                    }
+                })
+
+                gsap.from(infoBlock.current, {
+                    x: -10,
+                    opacity: 0,
+                    duration: .5,
+                    scrollTrigger: {
+                        trigger: ".home-3-right",
+                        start: "top 50%",
+                        end: "top top",
+                        scrub: true
+                    }
+                })
+
+                gsap.from(projectsButton.current, {
+                    x: 10,
+                    opacity: 0,
+                    duration: .5,
+                    scrollTrigger: {
+                        trigger: ".view-projects-button",
+                        start: "bottom bottom",
+                        end: "top 75%",
+                        scrub: true,
+                    }
+                })
+
+            }
+
+        });
+
+        ScrollTrigger.matchMedia({
+
+            "(max-width: 860px)": function () {
+
+                gsap.to(bgVideo.current, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: ".bg-video",
+                        scrub: true,
+                        pin: ".bg-video"
+                    }
+                })
+
+                gsap.from(infoMobile.current, {
+                    y: 50,
+                    opacity: 0,
+                    stagger: 1,
+                    duration: 1,
+                    delay: .2,
+                    scrollTrigger: {
+                        trigger: ".home-2",
+                    }
+                })
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".home-2",
+                        scrub: true,
+                        start: "top 90%",
+                        end: "bottom -50%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                })
+                tl
+                    .to(bgLogo.current, { opacity: .6, duration: 0.5 })
+                    .to(bgLogo.current, { opacity: 0, duration: 0.5 }, 0.5);
+
+
+
             }
         })
 
-        gsap.from(brandName1.current, {
-            // y: 90,
-            opacity: 0,
-            duration: .5,
-            delay: .4
-        })
-        gsap.from(brandName2.current, {
-            // y: -90,
-            opacity: 0,
-            duration: .5,
-            delay: .8
-        })
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".home-2",
-                scrub: true,
-                start: "top 30%",
-                end: "bottom -50%",
-                toggleActions: "play reverse play reverse",
-            }
-        })
-        tl
-            .to(bgLogo.current, { opacity: .6, duration: 0.5 })
-            .to(bgLogo.current, { opacity: 0, duration: 0.5 }, 0.5);
-
-        gsap.from(infoLines, {
-            y: 50,
-            skewX: 20,
-            skewY: 1,
-            opacity: 0,
-            stagger: 1,
-            duration: 1,
-            delay: .2,
-            scrollTrigger: {
-                trigger: ".home-2",
-                scrub: true,
-                pin: true,
-            }
-        })
-
-        gsap.from(particles.current, {
-            opacity: 0,
-            scrollTrigger: {
-                trigger: ".home-3-left",
-                scrub: true,
-                start: "top 50%",
-                end: "top top",
-            }
-        })
-
-        gsap.from(infoBlock.current, {
-            x: -10,
-            opacity: 0,
-            duration: .5,
-            scrollTrigger: {
-                trigger: ".home-3-right",
-                start: "top 50%",
-                end: "top top",
-                scrub: true
-            }
-        })
-
-        gsap.from(projectsButton.current, {
-            x: 10,
-            opacity: 0,
-            duration: .5,
-            scrollTrigger: {
-                trigger: ".view-projects-button",
-                start: "bottom bottom",
-                end: "top 75%",
-                scrub: true,
-            }
-        })
 
     }, []);
 
@@ -156,10 +214,8 @@ const LandingPage = () => {
                         <div ref={infoLine4}> innovative digital products for creatives, </div>
                         <div ref={infoLine5}> brands and businesses.</div></p>
                 </div>
-                <div className="info-container-1-mobile">
-                    <p><div class="paragraph-arrow"> <svg width="70" height="23" viewBox="0 0 122 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M121.389 12.3136C121.975 11.7278 121.975 10.7781 121.389 10.1923L111.843 0.646328C111.258 0.0605412 110.308 0.0605412 109.722 0.646328C109.136 1.23211 109.136 2.18186 109.722 2.76765L118.207 11.2529L109.722 19.7382C109.136 20.324 109.136 21.2737 109.722 21.8595C110.308 22.4453 111.258 22.4453 111.843 21.8595L121.389 12.3136ZM0.918732 12.7529H120.329V9.75293H0.918732V12.7529Z" fill="black" />
-                    </svg></div>
+                <div ref={infoMobile} className="info-container-1-mobile">
+                    <p>
                         We are a UK-based freelance collective
                         specialising in website development, video
                         production and 3D visualisation, providing
