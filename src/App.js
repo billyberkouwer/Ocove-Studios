@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import LandingPage from './LandingPage';
 import Navbar from './Navbar';
-import ScrollToTop from './scrollToTop';
 
 function App() { 
     

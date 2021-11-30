@@ -87,7 +87,7 @@ const ProjectWindow = ( props ) => {
                 <p>{projectTextContent}</p>
                 <a href={projectLinkURLContent}>{projectLinkContent}</a>
             </div>
-            <div className="project-images-container horizontal-center vertical-center">
+            <div className="project-images-container">
                 <img className='project-images' style={{opacity: imageFade}} alt={`${projectTitleContent} images`} src={`./images/${image}`}></img>
             </div>
         </div>
