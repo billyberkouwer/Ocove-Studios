@@ -183,6 +183,10 @@ video {
   opacity: .9
 }
 
+.brand-name-mobile {
+  display: none;
+}
+
 .brand-name-line-1 {
   font-size: calc(80px + 13vw);
   letter-spacing: .2px;
@@ -580,6 +584,17 @@ input::placeholder, textarea::placeholder {
 
 @media (max-width: 860px) {
 
+  .brand-name-desktop {
+    display: none;
+  }
+
+  .brand-name-mobile {
+    display: block;
+  }
+
+  .brand-name {
+    transform: translateY(2%) translateX(10px);
+  }
 
   .info-container-1-mobile {
     display: block;
