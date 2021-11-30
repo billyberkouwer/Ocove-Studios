@@ -59,7 +59,7 @@ const ServiceSection = () => {
                 duration: .35,
             })
             .to(buttonBorder2.current, {
-                y: -52,
+                y: -57,
                 duration: .4
             })
             .to(buttonBorder, {
@@ -74,7 +74,7 @@ const ServiceSection = () => {
                 scaleX: 0,
                 transformOrigin: "0%",
                 duration: .5,
-                stagger: .2
+                stagger: .5
             })
             .from(inputRef, {
                 y: 10,
