@@ -80,7 +80,7 @@ const ServiceSection = () => {
                 y: 10,
                 opacity: 0,
                 duration: .4,
-                stagger: .15
+                stagger: .2
             })
     }, [])
 
@@ -185,16 +185,16 @@ const ServiceSection = () => {
                     <div className="contact-info">
                         <p className="contact-name">Billy Myles-Berkouwer</p>
                         <p className="contact-email">billy@email.com</p>
-                        <a className="contact-link" href="https://billyberkouwer.com" rel="noreferrer">Website</a>
-                        <a className="contact-link" href="https://www.linkedin.com/in/billy-myles-berkouwer-229679222/" rel="noreferrer">Linkedin</a>
+                        <a className="contact-link" href="https://billyberkouwer.com" target="_blank" rel="noreferrer">Website</a>
+                        <a className="contact-link" href="https://www.linkedin.com/in/billy-myles-berkouwer-229679222/" target="_blank" rel="noreferrer">Linkedin</a>
                     </div>
                     <div className="contact-info-photo">
                     </div>
                     <div className="contact-info">
                         <p className="contact-name">Matt Congdon</p>
                         <p className="contact-email">matt@email.com</p>
-                        <a className="contact-link" href="https://mattcongdon.info" rel="noreferrer">Website</a>
-                        <a className="contact-link" href="https://www.linkedin.com/in/mattcong/" rel="noreferrer">Linkedin</a>
+                        <a className="contact-link" href="https://mattcongdon.info" target="_blank" rel="noreferrer">Website</a>
+                        <a className="contact-link" href="https://www.linkedin.com/in/mattcong/" target="_blank" rel="noreferrer">Linkedin</a>
                     </div>
                 </div>
 
