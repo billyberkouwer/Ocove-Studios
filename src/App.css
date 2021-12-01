@@ -613,6 +613,35 @@ video {
 
 @media (max-width: 860px) {
 
+  /* ------ Nav ------ */
+
+  .navbar .horizontal-line {
+    display: none
+  }
+
+  .navbar .ocove-logo {
+    display: none
+  }
+
+  .navbar {
+    padding: 15px 25px 10px 25px
+  }
+
+  .nav-links {
+    justify-content: space-between;
+  }
+
+  .nav-links li a {
+    font-size: calc(12px + 1.2vw);
+    padding: 10px 5%;
+  }
+
+  .nav-links:last-child {
+    padding-right: 0; 
+  }
+
+  /* ------ Home Page ------ */
+
   .brand-name-desktop {
     display: none;
   }

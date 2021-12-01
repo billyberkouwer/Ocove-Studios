@@ -10,8 +10,8 @@ const LandingPage = () => {
 
     // ANIMATIONS
 
-    const e = useRef();
-    const q = gsap.utils.selector(e);
+    // const e = useRef();
+    // const q = gsap.utils.selector(e);
 
     //DESKTOP REFS
 
