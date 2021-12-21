@@ -7,7 +7,7 @@ import Rock from './assets/3d/3D_icon.glb';
 const Model = (props) => {
     const group = useRef()
     const { nodes, materials } = useGLTF(Rock)
-    useFrame(() => (group.current.rotation.y += 0.01));
+    useFrame(() => (group.current.rotation.y += 0.005));
     return (
         <group ref={group} {...props} dispose={null}>
           <mesh

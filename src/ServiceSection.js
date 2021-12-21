@@ -96,7 +96,7 @@ const ServiceSection = () => {
                         </svg>
                     </div>
                 </div>
-                <div className="services-container">
+                <div className="services-container-desktop">
                     <div className="service-icon-container">
                         <div className="service-icon web-icon">
                             <Suspense fallback={<h1>...</h1>}>
@@ -134,10 +134,57 @@ const ServiceSection = () => {
                             <Suspense fallback={<h1>...</h1>}>
                                 <NewCameraIcon />
                             </Suspense>
-
                         </div>
                         <div className="service-name">
                             <h4>Video Production</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="services-container-mobile">
+                    <div className="services-container-mobile-row-1">
+                        <div className="service-icon-container">
+                            <div className="service-icon web-icon">
+                                <Suspense fallback={<h1>...</h1>}>
+                                    <NewWebIcon />
+                                </Suspense>
+                            </div>
+                            <div className="service-name">
+                                <h4>Web Development</h4>
+                            </div>
+                        </div>
+                        <div className="service-icon-container">
+                            <div className="service-icon 3d-icon">
+                                <Suspense fallback={<h1>...</h1>}>
+                                    <New3DIcon />
+                                </Suspense>
+
+                            </div>
+                            <div className="service-name">
+                                <h4>3d Visuals</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="services-container-mobile-row-2">
+                        <div className="service-icon-container">
+                            <div className="service-icon video-icon">
+                                <Suspense fallback={<h1>...</h1>}>
+                                    <ThreeLogoTwo />
+                                </Suspense>
+                            </div>
+                            <div className="service-name">
+                                <h4>Branding</h4>
+                            </div>
+                        </div>
+                        <div className="service-icon-container">
+                            <div className="service-icon video-icon">
+                                <Suspense fallback={<h1>...</h1>}>
+                                    <NewCameraIcon />
+                                </Suspense>
+                            </div>
+                            <div className="service-name">
+                                <h4>Video Production</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,7 +213,7 @@ const ServiceSection = () => {
                     </div> */}
                 </div>
 
-            </section>
+            </section >
 
             <section className="services-3">
                 <div className="header-container no-select">
@@ -200,7 +247,7 @@ const ServiceSection = () => {
 
             </section>
 
-        </div>
+        </div >
     );
 
 }

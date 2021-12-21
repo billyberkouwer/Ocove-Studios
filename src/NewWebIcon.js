@@ -7,7 +7,7 @@ import Web from "./assets/3d/web_icon.glb"
 const Model = (props) => {
     const group = useRef()
     const { nodes, materials } = useGLTF(Web)
-    useFrame(() => (group.current.rotation.y += 0.01));
+    useFrame(() => (group.current.rotation.y += 0.005));
     return (
       <group scale={[1.5,1.5,1.5]}ref={group} {...props} dispose={null}>
         <group

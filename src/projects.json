@@ -1,4 +1,15 @@
 {
+
+"ChappelGalleries": {
+        "title": "Chappel Galleries",
+        "text": "Chappel Galleries is a long-standing commercial gallery of modern and contemporary art. Throughout 2020 and 2021, we produced a series of five videos for their exhibitions. We recorded, edited, and colour graded the videos in-house. Each video contained an original score, interviews with the artists, and documentation of the gallery and the work on display.",
+        "images": ["cgalleries/gardens.jpg","cgalleries/ronaldson.jpg", "cgalleries/shanti-panchal.jpg"],
+        "links": {
+            "url": "https://www.chappelgalleries.co.uk",
+            "text": "Watch videos on Chappel Galleries' website"
+        }
+    },
+
     "AutonomicsResearchCentre": {
         "title": "Autonomics Research Centre",
         "text": "The Autonomics Research Centre is an art and academic research collective. We provided UI/UX design, website development and creative direction for their online presence and published output.",
@@ -6,15 +17,6 @@
         "links": {
             "url": "https://www.autonomia.ac",
             "text": "Visit Autonomics Research Centre Website"
-        }
-    },
-    "ChappelGalleries": {
-        "title": "Chappel Galleries",
-        "text": "Chappel Galleries is a long-standing commercial gallery of modern and contemporary art. Throughout 2020 and 2021, we produced a series of five videos for their exhibitions. We recorded, edited, and colour graded the videos with our in-house team. Each video contained an original score, interviews with the artists, and documentation of the gallery and the work on display.",
-        "images": ["cgalleries/gardens.jpg","cgalleries/ronaldson.jpg", "cgalleries/shanti-panchal.jpg"],
-        "links": {
-            "url": "https://www.chappelgalleries.co.uk",
-            "text": "Watch videos on Chappel Galleries' website"
         }
     },
     "JohnHounam": {

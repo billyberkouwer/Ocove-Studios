@@ -6,7 +6,7 @@ import Camera from "./assets/3d/camera.glb"
 const Model = (props) => {
   const group = useRef()
   const { nodes, materials } = useGLTF(Camera)
-  useFrame(() => (group.current.rotation.y += 0.01));
+  useFrame(() => (group.current.rotation.y += 0.005));
   return (
     <group ref={group} {...props} dispose={null}>
       <group scale={[3,3,3]}>
