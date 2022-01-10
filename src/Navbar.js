@@ -6,9 +6,9 @@ import { gsap } from "gsap";
 const Navbar = () => {
 
     const e = useRef();
-    const q = gsap.utils.selector(e);
 
     useEffect(() => {
+        const q = gsap.utils.selector(e);
         gsap.from(q(".nav-link"), {
             y: -15,
             opacity: 0,
