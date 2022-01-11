@@ -246,13 +246,13 @@ const ServiceSection = () => {
                     <div className="contact-info">
                         <a href="https://billyberkouwer.com" target="_blank" rel="noreferrer">Website</a>
                         <a href="https://mattcongdon.info" target="_blank" rel="noreferrer">Website</a>
-                        <a href="" target="_blank" rel="noreferrer">Website</a>
+                        <a href="https://arranbaker.vercel.app/" target="_blank" rel="noreferrer">Website</a>
                     </div>
 
                     <div className="contact-info">
                         <a href="https://www.linkedin.com/in/billy-myles-berkouwer-229679222/" target="_blank" rel="noreferrer">Linkedin</a>
                         <a href="https://www.linkedin.com/in/mattcong/" target="_blank" rel="noreferrer">Linkedin</a>
-                        <a href="" target="_blank" rel="noreferrer">Linkedin</a>
+                        <a href="https://arranbaker.vercel.app/" target="_blank" rel="noreferrer">Linkedin</a>
                     </div>
                     <div className="contact-logo-wrapper">
                         <svg className="contact-logo" width="700" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.53 255.46">
