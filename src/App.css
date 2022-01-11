@@ -524,14 +524,14 @@ video {
   width: 50%;
   height: 100%;
   background-color: none;
-  object-fit: cover;
   overflow: hidden;
 }
 
 .project-images {
   background-color: rgb(186, 196, 206);
-  width: auto;
-  height: inherit;
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
   opacity: 1;
   transition: ease .5s;
 }

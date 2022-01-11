@@ -82,7 +82,7 @@ const ServiceSection = () => {
                 duration: .4,
                 stagger: .2
             })
-    }, [])
+    }, [tl])
 
 
     return (

@@ -181,7 +181,6 @@ const LandingPage = () => {
             }
         })
 
-
     }, []);
 
     return (
