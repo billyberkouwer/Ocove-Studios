@@ -5,7 +5,7 @@ import Projects from './projects.json';
 import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Transition, TransitionGroup, CSSTransition } from 'react-transition-group';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import LandingPage from './LandingPage';
 import Navbar from './Navbar';
 
@@ -45,7 +45,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 3500);
   }, []);
 
 
@@ -53,11 +53,8 @@ function App() {
     <>
       {
         loading ?
-          <Transition>
             <Loading />
-          </Transition>
           :
-
           <Router>
             <div className="wrapper">
               <Navbar />
