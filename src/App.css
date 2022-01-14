@@ -227,7 +227,7 @@ video {
   display: none;
 }
 
-.brand-name-line-1 {
+/* .brand-name-line-1 {
   font-size: calc(80px + 13vw);
   letter-spacing: .2px;
   font-family: DxSitrus
@@ -235,10 +235,10 @@ video {
 
 .brand-name-line-2 {
   letter-spacing: calc(-0.15px + -1vw);
-  /* transform: translateY(-25%); */
+  /* transform: translateY(-25%);
   font-family: PPHatton-Medium;
   font-size: calc(60px + 13vw);
-}
+} */
 
 .home-1-footer {
   width: 90%;
@@ -432,16 +432,16 @@ video {
 .project-menu {
   box-sizing: border-box;
   display: flex;
-  align-items: center;
   width: 25%;
   height: 100%;
-  margin: 0 0 0 4vw;
+  margin: 4.5em 0 0 4vw;
   font-size: calc(9px + 0.8vw);
   text-transform: uppercase;
 }
 
 .project-menu ul {
   list-style-type: none;
+  color: #242424
 }
 
 .project-menu li {
@@ -670,9 +670,9 @@ video {
 
 .contact-info-container {
   display: grid;
-  width: 65%;
+  width: 60%;
   height: 38%;
-  grid-template-columns: 25% 25% 10% 10%; 
+  grid-template-columns: 35% 10% 10% 10%; 
   align-items: space-evenly;
   justify-content: space-between;
   margin: 50px auto 50px 60px;
@@ -748,16 +748,16 @@ video {
   }
 
   .navbar {
-    padding: 15px 9% 10px 9%
+    padding: 15px 0% 10px 0%
   }
 
   .nav-links {
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .nav-links li a {
     font-size: calc(12px + 1.2vw);
-    padding: 10px 5%;
+    padding: 10px 10%;
   }
 
   .nav-links:last-child {
@@ -787,6 +787,10 @@ video {
     transform: translateY(2%) translateX(8px);
   }
 
+  .home-1-footer h3 {
+    font-size: calc(15px + 1vw);
+  }
+
   .info-container-1-mobile {
     display: block;
   }
@@ -801,7 +805,7 @@ video {
     z-index: 1;
     width: 80%;
     margin: 30% auto;
-    line-height: calc(25px + 2vw);
+    line-height: calc(28px + 2vw);
     letter-spacing: 1px;
   }
 
@@ -970,5 +974,16 @@ video {
     width: inherit
   }
 
+  .contact-info {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
 
+  .contact-info-container {
+    width: 90%;
+    grid-template-columns: 50% 10% 10% 10%;
+    margin: 50px auto 50px auto;
+  }
 }
